@@ -1,0 +1,104 @@
+services:
+
+    immich-redis:
+        image: redis:6.2-alpine
+        hostname: immich-redis
+        container_name: immich-redis
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "redis-cli ping || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        networks:
+            - immich-internal
+        volumes:
+          - immich-redis:/data
+          - /etc/localtime:/etc/localtime:ro
+          - /etc/timezone:/etc/timezone:ro
+
+    immich-postgres:
+        image: tensorchord/pgvecto-rs:pg14-v0.2.0
+        hostname: immich-postgres
+        container_name: immich-postgres
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -d immich -U immich"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        networks:
+            - immich-internal
+        environment:
+            POSTGRES_USER: immich
+            POSTGRES_PASSWORD: ${DB_PASSWORD}
+            POSTGRES_DB: immich
+        volumes:
+          - immich-postgres:/var/lib/postgresql/data
+          - /etc/localtime:/etc/localtime:ro
+          - /etc/timezone:/etc/timezone:ro
+
+    immich:
+        image: ghcr.io/immich-app/immich-server:release
+        hostname: immich
+        container_name: immich
+        restart: unless-stopped
+        depends_on:
+            immich-redis:
+                condition: service_healthy
+            immich-postgres:
+                condition: service_healthy
+        healthcheck:
+            test: ["CMD-SHELL", "curl --fail http://immich:2283/api/server/ping || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        environment:
+            - UPLOAD_LOCATION=/usr/src/app/upload
+            - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
+            - DB_PASSWORD=${DB_PASSWORD}
+            - DB_HOSTNAME=immich-postgres
+            - DB_USERNAME=immich
+            - DB_DATABASE_NAME=immich
+            - REDIS_HOSTNAME=immich-redis
+        networks:
+            immich:
+                ipv4_address: ${IPv4}
+            immich-internal:
+        ports:
+          - "${HOST_PORT}:2283"
+        volumes:
+          - ${PHOTO_PATH}:/usr/src/app/upload
+          - /etc/localtime:/etc/localtime:ro
+          - /etc/timezone:/etc/timezone:ro
+
+volumes:
+    immich-redis:
+        name: immich-redis
+        driver: local
+    immich-postgres:
+        name: immich-postgres
+        driver: local
+
+networks:
+    immich:
+        name: immich
+        driver: bridge
+        ipam:
+            config:
+                - subnet: ${SUBNET}
+                  gateway: ${GATEWAY}
+    immich-internal:
+        name: immich-internal
+        driver: bridge
+        internal: true
+        ipam:
+            config:
+                - subnet: ${SUBNET_INTERNAL}
+                  gateway: ${GATEWAY_INTERNAL}

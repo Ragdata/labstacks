@@ -1,0 +1,33 @@
+services:
+
+    dozzle:
+        image: amir20/dozzle:latest
+        hostname: dozzle
+        container_name: dozzle
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD", "/dozzle", "healthcheck"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+        environment:
+            - DOZZLE_LEVEL=info
+            - DOZZLE_FILTER=status=running
+        networks:
+            dozzle:
+                ipv4_address: ${IPv4}
+        ports:
+            - "${HOST_PORT}:8080"
+        volumes:
+          - /var/run/docker.sock:/var/run/docker.sock:ro
+          - /etc/localtime:/etc/localtime:ro
+          - /etc/timezone:/etc/timezone:ro
+
+networks:
+    dozzle:
+        name: dozzle
+        driver: bridge
+        ipam:
+            config:
+                - subnet: ${SUBNET}
+                  gateway: ${GATEWAY}

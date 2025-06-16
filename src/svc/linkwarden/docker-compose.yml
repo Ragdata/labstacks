@@ -1,0 +1,77 @@
+services:
+
+    linkwarden-postgres:
+        image: postgres:17.5-alpine
+        hostname: linkwarden-postgres
+        container_name: linkwarden-postgres
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -d linkwarden -U ${POSTGRES_USER}"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+        environment:
+            - POSTGRES_USER=${POSTGRES_USER}
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+            - POSTGRES_DB=linkwarden
+        networks:
+            - linkwarden-internal
+        ports:
+            - "${HOST_PORT_PG}:5432"
+        volumes:
+            - linkwarden-postgres:/var/lib/postgresql/data
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+
+    linkwarden:
+        image: ghcr.io/linkwarden/linkwarden:latest
+        hostname: linkwarden
+        container_name: linkwarden
+        restart: unless-stopped
+        depends_on:
+            linkwarden-postgres:
+                condition: service_healthy
+        healthcheck:
+            test: ["CMD-SHELL", "curl --fail http://linkwarden:3000/ || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+        environment:
+            - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@linkwarden-postgres:5432/linkwarden
+            - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
+            - NEXTAUTH_URL=http://linkwarden:3000/api/v1/auth
+        networks:
+            linkwarden:
+                ipv4_address: ${IPv4}
+            linkwarden-internal:
+        ports:
+            - "${HOST_PORT}:3000"
+        volumes:
+            - linkwarden-data:/data/data
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+
+volumes:
+    linkwarden-postgres:
+        name: linkwarden-postgres
+        driver: local
+    linkwarden-data:
+        name: linkwarden-data
+        driver: local
+
+networks:
+    linkwarden:
+        name: linkwarden
+        driver: bridge
+        ipam:
+            config:
+                - subnet: ${SUBNET}
+                  gateway: ${GATEWAY}
+    linkwarden-internal:
+        name: linkwarden-internal
+        driver: bridge
+        internal: true
+        ipam:
+            config:
+                - subnet: ${SUBNET_INTERNAL}
+                  gateway: ${GATEWAY_INTERNAL}

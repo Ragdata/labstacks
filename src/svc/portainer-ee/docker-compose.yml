@@ -1,0 +1,100 @@
+services:
+
+    portainer-agent:
+        image: portainer/agent:alpine
+        hostname: portainer-agent
+        container_name: portainer-agent
+        restart: unless-stopped
+        environment:
+            AGENT_CLUSTER_ADDR: tasks.portainer-agent
+        networks:
+            - portainer-internal
+        ports:
+            - "9001:9001"
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+        deploy:
+            mode: global
+            placement:
+                constraints: [ node.platform.os == linux ]
+
+    portainer:
+        image: portainer/portainer-ee:alpine
+        hostname: portainer
+        container_name: portainer
+        restart: unless-stopped
+        command: -H tcp://tasks.portainer-agent:9001 --tlsskipverify
+        healthcheck:
+            test: ["CMD-SHELL", "wget --no-verbose --tries=3 --spider http://portainer:9000 || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        networks:
+            portainer:
+                ipv4_address: ${IPv4}
+            portainer-internal:
+        ports:
+            - "8000:8000"
+            - "9000:9000"
+            - "9443:9443"
+        volumes:
+            - portainer-data:/data
+            - /var/run/docker.sock:/var/run/docker.sock
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+        deploy:
+            mode: replicated
+            replicas: 1
+            placement:
+                constraints: [ node.role == manager ]
+
+    portainer-tools:
+        image: technorabilia/portainer-tools
+        hostname: portainer-tools
+        container_name: portainer-tools
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "wget --no-verbose --tries=3 --spider http://portainer-tools:9999 || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        networks:
+            portainer:
+                ipv4_address: ${IPv4_TOOLS}
+        ports:
+            - "9999:9999"
+        volumes:
+            - portainer-tools:/config
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+
+volumes:
+    portainer-data:
+        name: portainer-data
+        driver: local
+    portainer-tools:
+        name: portainer-tools
+        driver: local
+
+networks:
+    portainer:
+        name: portainer
+        driver: bridge
+        ipam:
+            config:
+                - subnet: ${SUBNET}
+                  gateway: ${GATEWAY}
+    portainer-internal:
+        name: portainer-internal
+        driver: bridge
+        internal: true
+        ipam:
+            config:
+                - subnet: ${SUBNET_INTERNAL}
+                  gateway: ${GATEWAY_INTERNAL}

@@ -1,0 +1,18 @@
+services:
+
+    cloudflare-ddns:
+        image: favonia/cloudflare-ddns:latest
+        hostname: cloudflare-ddns
+        container_name: cloudflare-ddns
+        restart: unless-stopped
+        security_opt:
+        - no-new-privileges:true
+        cap_drop:
+        - ALL
+        user: "${UID:-1000}:${GID:-1000}"
+        read_only: true
+        environment:
+            - CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN}
+            - DOMAINS=${DOMAINS}
+            - PROXIED=${PROXIED}
+        network_mode: host

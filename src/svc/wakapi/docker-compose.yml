@@ -1,0 +1,37 @@
+services:
+
+    wakapi:
+        image: ghcr.io/muety/wakapi:latest
+        hostname: wakapi
+        container_name: wakapi
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "wget -nv -t1 --spider http://wakapi:3000/api/health || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+        environment:
+            WAKAPI_PASSWORD_SALT: ${SALT}
+        networks:
+            wakapi:
+                ipv4_address: ${IPv4}
+        ports:
+            - "${HOST_PORT}:3000"
+        volumes:
+            - wakapi-data:/data
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+
+volumes:
+    wakapi-data:
+        name: wakapi-data
+        driver: local
+
+networks:
+    wakapi:
+        name: wakapi
+        driver: bridge
+        ipam:
+            config:
+                - subnet: ${SUBNET}
+                  gateway: ${GATEWAY}

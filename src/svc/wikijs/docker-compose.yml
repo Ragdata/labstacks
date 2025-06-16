@@ -1,0 +1,82 @@
+services:
+
+    wikijs:
+        image: ghcr.io/requarks/wiki:latest
+        hostname: wikijs
+        container_name: wikijs
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "wget -nv -t1 --spider http://wikijs:3000 || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+        environment:
+            DB_TYPE=postgres
+            DB_HOST=wikijs-postgres
+            DB_PORT=5432
+            DB_USER=wikijs
+            DB_PASS=${DB_PASS}
+            DB_NAME=wikijs
+        networks:
+            wikijs:
+                ipv4_address: ${IPv4}
+            wikijs-internal:
+        ports:
+            - "${HOST_PORT}:3000"
+        volumes:
+            - wikijs-content:/wiki/data/content
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+
+    wikijs-postgres:
+        image: postgres:17.5-alpine
+        hostname: wikijs-postgres
+        container_name: wikijs-postgres
+        restart: unless-stopped
+        stop_grace_period: 5s
+        security_opt: [
+            "seccomp:unconfined",
+            "apparmor:unconfined"
+        ]
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -d wikijs -U wikijs"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+        environment:
+            POSTGRES_USER=wikijs
+            POSTGRES_PASSWORD=${DB_PASS}
+            POSTGRES_DB=wikijs
+        networks:
+            - wikijs-internal
+        ports:
+            - "${HOST_PORT_PG}:5432"
+        volumes:
+            - wikijs-postgres:/var/lib/postgresql/data
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+
+volumes:
+    wikijs-content:
+        name: wikijs-content
+        driver: local
+    wikijs-postgres:
+        name: wikijs-postgres
+        driver: local
+
+networks:
+    wikijs:
+        name: wikijs
+        driver: bridge
+        ipam:
+            config:
+                - subnet: ${SUBNET}
+                  gateway: ${GATEWAY}
+    wikijs-internal:
+        name: wikijs-internal
+        driver: bridge
+        internal: true
+        ipam:
+            config:
+                - subnet: ${SUBNET_INTERNAL}
+                  gateway: ${GATEWAY_INTERNAL}
