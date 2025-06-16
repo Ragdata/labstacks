@@ -3,6 +3,7 @@ services:
     newt:
         image: fosrl/newt:latest
         hostname: newt
+        container_name: newt
         environment:
             PANGOLIN_ENDPOINT: ${PANGOLIN_ENDPOINT}
             NEWT_ID: ${NEWT_ID}
@@ -10,9 +11,7 @@ services:
             DOCKER_SOCKET: /var/run/docker.sock
         networks:
             newt:
-                aliases:
-                    - newt
-                    - newt.local
+                ipv4_address: ${IPv4}
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock:ro
             - /etc/localtime:/etc/localtime:ro
@@ -23,7 +22,7 @@ networks:
         driver: bridge
         driver_opts:
             encrypted: "true"
-            attachable: "true"
         ipam:
             config:
                 - subnet: ${SUBNET}
+                  gateway: ${GATEWAY}
