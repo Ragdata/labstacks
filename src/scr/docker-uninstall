@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+####################################################################
+# Author:       Ragdata
+# Date:         03/06/2025
+# License:      MIT License
+# Copyright:    Copyright © 2025 Redeyed Technologies
+####################################################################
+# INSTALL DOCKER
+####################################################################
+
+# Check if the script is run as root
+if [ "$(id -u)" -ne 0 ]; then
+	echo "This script must be run as root. Use 'sudo' to run it."
+	exit 1
+fi
+
+systemctl stop docker
+
+for pkg in docker-buildx-plugin docker-ce docker-ce-cli docker-ce-rootless-extras docker-compose-plugin containerd.io; do apt remove --purge -y $pkg; done
+
+apt autoremove -y --purge
+
+rm -rf /etc/docker
+
+dir=$(docker info 2>&1 | grep -i "docker root dir" | awk '{print $4}')
+
+[[ -d "$dir" ]] && rm -rf "$dir"
+
+systemctl status docker
+
+echo "Docker has been uninstalled successfully."
