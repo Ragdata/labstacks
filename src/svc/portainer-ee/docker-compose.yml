@@ -15,10 +15,6 @@ services:
             - /var/run/docker.sock:/var/run/docker.sock
             - /etc/localtime:/etc/localtime:ro
             - /etc/timezone:/etc/timezone:ro
-        deploy:
-            mode: global
-            placement:
-                constraints: [ node.platform.os == linux ]
 
     portainer:
         image: portainer/portainer-ee:alpine
@@ -46,11 +42,6 @@ services:
             - /var/run/docker.sock:/var/run/docker.sock
             - /etc/localtime:/etc/localtime:ro
             - /etc/timezone:/etc/timezone:ro
-        deploy:
-            mode: replicated
-            replicas: 1
-            placement:
-                constraints: [ node.role == manager ]
 
     portainer-tools:
         image: technorabilia/portainer-tools
