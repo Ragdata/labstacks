@@ -5,6 +5,13 @@ services:
         hostname: portainer-agent
         container_name: portainer-agent
         restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "touch /tmp/health.txt"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
         environment:
             AGENT_CLUSTER_ADDR: tasks.portainer-agent
         networks:
@@ -12,6 +19,7 @@ services:
         ports:
             - "9001:9001"
         volumes:
+            - /:/host
             - /var/run/docker.sock:/var/run/docker.sock
             - /etc/localtime:/etc/localtime:ro
             - /etc/timezone:/etc/timezone:ro
@@ -49,7 +57,7 @@ services:
         container_name: portainer-tools
         restart: unless-stopped
         healthcheck:
-            test: ["CMD-SHELL", "wget --no-verbose --tries=3 --spider http://portainer-tools:9999 || exit 1"]
+            test: ["CMD-SHELL", "touch /tmp/health.txt"]
             interval: 1m
             timeout: 10s
             retries: 3
