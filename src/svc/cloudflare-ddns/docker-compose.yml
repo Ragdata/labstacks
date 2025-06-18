@@ -11,6 +11,13 @@ services:
         - ALL
         user: "${UID:-1000}:${GID:-1000}"
         read_only: true
+        healthcheck:
+            test: ["CMD-SHELL", "touch /tmp/health.txt"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
         environment:
             - CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN}
             - DOMAINS=${DOMAINS}
