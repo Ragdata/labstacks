@@ -1,0 +1,67 @@
+services:
+    filestash:
+        image: machines/filestash:latest
+        hostname: filestash
+        container_name: filestash
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "curl --fail http://filestash:8334 || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        environment:
+            APPLICATION_URL:
+            CANARY: true
+            OFFICE_URL: http://wopi_server:9980
+            OFFICE_FILESTASH_URL: http://filestash:8334
+            OFFICE_REWRITE_URL: http://127.0.0.1:9980
+        networks:
+            filestash:
+                ipv4_address: ${IPv4}
+        ports:
+            - ${HOST_PORT}:8334
+        volumes:
+            - filestash:/app/data/state/
+
+    filestash-wopi:
+        image: collabora/code:24.04.10.2.1
+        hostname: filestash-wopi
+        container_name: filestash-wopi
+        user: root
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "curl --fail http://filestash-wopi:9980 || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        environment:
+            extra_params: "--o:ssl.enable=false"
+            aliasgroup1: "https://.*:443"
+        command:
+            - /bin/bash
+            - -c
+            - |
+                curl -o /usr/share/coolwsd/browser/dist/branding-desktop.css https://gist.githubusercontent.com/mickael-kerjean/bc1f57cd312cf04731d30185cc4e7ba2/raw/d706dcdf23c21441e5af289d871b33defc2770ea/destop.css
+                /bin/su -s /bin/bash -c '/start-collabora-online.sh' cool
+        networks:
+            - filestash
+        ports:
+            - ${HOST_PORT_WOPI}:9980
+
+volumes:
+    filestash:
+        name: filestash
+        driver: local
+
+networks:
+    filestash:
+        name: filestash
+        driver: bridge
+        ipam:
+            config:
+                - subnet: ${SUBNET}
+                  gateway: ${GATEWAY}
