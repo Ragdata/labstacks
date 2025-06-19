@@ -11,8 +11,8 @@ services:
             timeout: 10s
             retries: 3
         environment:
-            - DOZZLE_LEVEL=info
-            - DOZZLE_FILTER=status=running
+            DOZZLE_LEVEL: info
+            DOZZLE_FILTER: status=running
         networks:
             dozzle:
                 ipv4_address: ${IPv4}
