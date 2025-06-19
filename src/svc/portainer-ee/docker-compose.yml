@@ -15,9 +15,9 @@ services:
         environment:
             AGENT_CLUSTER_ADDR: tasks.portainer-agent
         networks:
-            - portainer-internal
+            - portainer
         ports:
-            - "9001:9001"
+            - 9001:9001
         volumes:
             - /:/host
             - /var/run/docker.sock:/var/run/docker.sock
@@ -37,14 +37,15 @@ services:
             retries: 3
             start_interval: 10s
             start_period: 1m
+        environment:
+            VIRTUAL_HOST: portainer.aever.au
+            VIRTUAL_PORT: 9443
+            VIRTUAL_PROTO: https
         networks:
             portainer:
                 ipv4_address: ${IPv4}
-            portainer-internal:
         ports:
-            - "8000:8000"
-            - "9000:9000"
-            - "9443:9443"
+            - 8000:8000
         volumes:
             - portainer-data:/data
             - /var/run/docker.sock:/var/run/docker.sock
@@ -67,7 +68,7 @@ services:
             portainer:
                 ipv4_address: ${IPv4_TOOLS}
         ports:
-            - "9999:9999"
+            - 9999:9999
         volumes:
             - portainer-tools:/config
             - /etc/localtime:/etc/localtime:ro
@@ -89,11 +90,3 @@ networks:
             config:
                 - subnet: ${SUBNET}
                   gateway: ${GATEWAY}
-    portainer-internal:
-        name: portainer-internal
-        driver: bridge
-        internal: true
-        ipam:
-            config:
-                - subnet: ${SUBNET_INTERNAL}
-                  gateway: ${GATEWAY_INTERNAL}
