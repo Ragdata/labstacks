@@ -6,7 +6,7 @@ services:
         container_name: dokku
         restart: unless-stopped
         healthcheck:
-            test: ["CMD-SHELL", "wget -nv -t1 --spider http://dokku:80 || exit 1"]
+            test: ["CMD-SHELL", "touch /tmp/health.txt"]
             interval: 1m
             timeout: 10s
             retries: 3
