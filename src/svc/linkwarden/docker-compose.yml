@@ -10,6 +10,8 @@ services:
             interval: 1m
             timeout: 10s
             retries: 3
+            start_interval: 10s
+            start_period: 1m
         environment:
             - POSTGRES_USER=${POSTGRES_USER}
             - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
@@ -36,6 +38,8 @@ services:
             interval: 1m
             timeout: 10s
             retries: 3
+            start_interval: 10s
+            start_period: 1m
         environment:
             - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@linkwarden-postgres:5432/linkwarden
             - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}

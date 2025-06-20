@@ -10,6 +10,8 @@ services:
             interval: 1m
             timeout: 10s
             retries: 3
+            start_interval: 10s
+            start_period: 1m
         networks:
             it-tools:
                 ipv4_address: ${IPv4}
