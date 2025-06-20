@@ -13,9 +13,9 @@ services:
             start_interval: 10s
             start_period: 1m
         environment:
-            DOKKU_HOSTNAME: dokku.me
-            DOKKU_HOST_ROOT: /var/lib/dokku/home/dokku
-            DOKKU_LIB_HOST_ROOT: /var/lib/dokku/var/lib/dokku
+            DOKKU_HOSTNAME: ${DOKKU_HOSTNAME}
+            DOKKU_HOST_ROOT: /mnt/dokku/home/dokku
+            DOKKU_LIB_HOST_ROOT: /mnt/dokku/var/lib/dokku
         networks:
             dokku:
                 ipv4_address: ${IPv4}
