@@ -17,8 +17,8 @@ services:
             DOKKU_HOST_ROOT: /var/lib/dokku/home/dokku
             DOKKU_LIB_HOST_ROOT: /var/lib/dokku/var/lib/dokku
         networks:
-            dozzle:
-            ipv4_address: ${IPv4}
+            dokku:
+                ipv4_address: ${IPv4}
         ports:
             - "${HOST_PORT_SSH}:22"
             - "${HOST_PORT_WEB}:80"
