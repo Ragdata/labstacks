@@ -1,0 +1,42 @@
+services:
+
+    sftpgo:
+        image: drakkan/sftpgo:latest
+        hostname: sftpgo
+        container_name: sftpgo
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "curl --fail http://sftpgo:8080 || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        environment:
+            SFTPGO_COMMON_CONFIG_FILE: /etc/sftpgo/sftpgo.json # Specify config file path
+        networks:
+            sftpgo:
+                ipv4_address: ${IPv4}
+        ports:
+            - "${HOST_PORT_SFTP}:22" # SFTP port
+            - "${HOST_PORT_WEB}:8080" # Web admin interface
+        volumes:
+            - sftpgo-config:/etc/sftpgo # Configuration directory
+            - sftpgo-data:/var/lib/sftpgo # Data directory
+
+volumes:
+    sftpgo-config:
+        name: sftpgo-config
+        driver: local
+    sftpgo-data:
+        name: sftpgo-data
+        driver: local
+
+networks:
+    sftpgo:
+        name: sftpgo
+        driver: bridge
+        ipam:
+            config:
+                - subnet: ${SUBNET}
+                  gateway: ${GATEWAY}
