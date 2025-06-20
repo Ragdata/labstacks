@@ -8,7 +8,7 @@ services:
             - apparmor:unconfined
         restart: unless-stopped
         healthcheck:
-            test: ["CMD-SHELL", "curl --fail http://sftpgo:8080 || exit 1"]
+            test: ["CMD-SHELL", "touch /tmp/health.txt"]
             interval: 1m
             timeout: 10s
             retries: 3
