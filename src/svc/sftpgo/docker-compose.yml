@@ -25,7 +25,12 @@ services:
         volumes:
             - sftpgo-config:/etc/sftpgo # Configuration directory
             - sftpgo-data:/var/lib/sftpgo # Data directory
-
+            # - /mnt/backup:/backup
+            # - /mnt/cloud:/cloud
+            # - /mnt/home:/users
+            # - /mnt/rpg:/rpg
+            # - /mnt/vol:/volumes
+            
 volumes:
     sftpgo-config:
         name: sftpgo-config
