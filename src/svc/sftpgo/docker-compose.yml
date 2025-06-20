@@ -4,6 +4,8 @@ services:
         image: drakkan/sftpgo:latest
         hostname: sftpgo
         container_name: sftpgo
+        security_opt:
+            - apparmor:unconfined
         restart: unless-stopped
         healthcheck:
             test: ["CMD-SHELL", "curl --fail http://sftpgo:8080 || exit 1"]
