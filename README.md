@@ -32,35 +32,32 @@
 
 ## [App Directory](#top) ✨
 
-<details><summary><em><strong>Click to View Apps</strong></em></summary>
+_Linked packages are currently available, non-linked packages are coming soon_
 
 * [Cloudflare DDNS](https://github.com/ragdata/labstacks/blob/master/cloudflare-ddns)
-* [Dashy]()
+* Dashy
 * [Dockwatch](https://github.com/ragdata/labstacks/blob/master/dockwatch)
 * [Dozzle](https://github.com/ragdata/labstacks/blob/master/dozzle)
-* [Handbrake]()
-* [Homarr]()
-* [Huginn]()
+* Handbrake
+* Homarr
+* Huginn
 * [Immich](https://github.com/ragdata/labstacks/blob/master/dozzle)
-    * [Immich Backup]()
-    * [Immich Machine Learning]()
-    * [Immich Power Tools]()
-    * [Immich Public Proxy]()
+    * Immich Backup
+    * Immich Machine Learning
+    * Immich Power Tools
+    * Immich Public Proxy
 * [IT Tools](https://github.com/ragdata/labstacks/blob/master/it-tools)
-* [Jekyll]()
-* [Jekyll-GHpages]()
+* Jekyll
+* Jekyll-GHpages
 * [Linkwarden](https://github.com/ragdata/labstacks/blob/master/linkwarden)
-* [Mattermost]()
-* [MKVToolnix]()
-* [N8n]()
-* [NocoDB]()
+* Mattermost
+* MKVToolnix
+* N8n
+* NocoDB
 * [Portainer EE](https://github.com/ragdata/labstacks/tree/master/portainer-ee)
-* [Postiz]()
-* [Seafile](https://github.com/ragdata/labstacks/tree/master/seafile)
-* [Vaultwarden](https://github.com/ragdata/labstacks/tree/master/vaultwarden)
-* [WikiJS]()
+* Postiz
+* WikiJS
 
-</details>
 <br>
 
 [`^ Top`](#top)
