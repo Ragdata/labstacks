@@ -24,6 +24,8 @@ services:
             - ${HOST_PORT}:8334
         volumes:
             - filestash:/app/data/state/
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
 
     filestash-wopi:
         image: collabora/code:24.04.10.2.1
@@ -52,6 +54,9 @@ services:
                 ipv4_address: ${IPv4_WOPI}
         ports:
             - ${HOST_PORT_WOPI}:9980
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
 
 volumes:
     filestash:

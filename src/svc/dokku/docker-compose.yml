@@ -27,6 +27,8 @@ services:
         volumes:
             - dokku-data:/mnt/dokku
             - /var/run/docker.sock:/var/run/docker.sock
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
 
 volumes:
     dokku-data:
