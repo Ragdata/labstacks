@@ -1,0 +1,293 @@
+services:
+
+    oo-mysql:
+        image: mysql:8.0.29
+        hostname: oo-mysql
+        container_name: oo-mysql
+        healthcheck:
+            test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p${MYSQL_ROOT_PASSWORD} || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        networks:
+            - onlyoffice
+        stdin_open: true
+        tty: true
+        restart: unless-stopped
+        volumes:
+            - oo-mysql:/var/lib/mysql
+            - oo-mysql-conf:/etc/mysql/conf.d
+            - oo-mysql-initdb:/docker-entrypoint-initdb.d
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+
+    onlyoffice:
+        image: onlyoffice/communityserver:12.6.0.1900
+        hostname: onlyoffice
+        container_name: onlyoffice
+        restart: unless-stopped
+        privileged: true
+        stdin_open: true
+        cgroup: host
+        tty: true
+        healthcheck:
+            test: ["CMD-SHELL", "curl --fail http://onlyoffice:80 || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        depends_on:
+            oo-mysql:
+                condition: service_healthy
+            oo-docs:
+                condition: service_healthy
+            oo-mail:
+                condition: service_healthy
+            oo-elasticsearch:
+                condition: service_healthy
+        environment:
+            ONLYOFFICE_CORE_MACHINEKEY: ${ONLYOFFICE_CORE_MACHINEKEY}
+            CONTROL_PANEL_PORT_80_TCP: 80
+            CONTROL_PANEL_PORT_80_TCP_ADDR: control-panel
+            DOCUMENT_SERVER_PORT_80_TCP_ADDR: oo-docs
+            DOCUMENT_SERVER_JWT_ENABLED: true
+            DOCUMENT_SERVER_JWT_SECRET: ${JWT_SECRET}
+            DOCUMENT_SERVER_JWT_HEADER: AuthorizationJwt
+            MYSQL_SERVER_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_SERVER_DB_NAME: onlyoffice
+            MYSQL_SERVER_HOST: oo-mysql
+            MYSQL_SERVER_USER: onlyoffice
+            MYSQL_SERVER_PASS: ${MYSQL_SERVER_PASS}
+            MAIL_SERVER_API_PORT: 8081
+            MAIL_SERVER_API_HOST: oo-mail
+            MAIL_SERVER_DB_HOST: oo-mysql
+            MAIL_SERVER_DB_PORT: 3306
+            MAIL_SERVER_DB_NAME: mailserver
+            MAIL_SERVER_DB_USER: mailserver
+            MAIL_SERVER_DB_PASS: ${MAIL_SERVER_DB_PASS}
+            ELASTICSEARCH_SERVER_HOST: oo-elasticsearch
+            ELASTICSEARCH_SERVER_HTTPPORT: 9200
+        networks:
+            onlyoffice:
+                ipv4_address: ${IPv4_OFFICE}
+        ports:
+            - 80:80
+            - 443:443
+            - 5222:5222
+        volumes:
+            - oo-data:/var/www/onlyoffice/Data
+            - oo-log:/var/log/onlyoffice
+            - oo-letsencrypt:/etc/letsencrypt
+            - oo-docs:/var/www/onlyoffice/DocumentServerData
+            - oo-certs:/var/www/onlyoffice/Data/certs
+            - /sys/fs/cgroup:/sys/fs/cgroup:rw
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+
+    oo-elasticsearch:
+        image: onlyoffice/elasticsearch:7.16.3
+        hostname: oo-elasticsearch
+        container_name: oo-elasticsearch
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "curl --fail http://localhost:9200/_cluster/health?pretty || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        ulimits:
+            memlock:
+                soft: -1
+                hard: -1
+            nofile:
+                soft: 65535
+                hard: 65535
+        environment:
+            discovery.type: single-node
+            bootstrap.memory_lock: true
+            ES_JAVA_OPTS: "-Xms1g -Xmx1g -Dlog4j2.formatMsgNoLookups=true"
+            indices.fielddata.cache.size: 30%
+            indices.memory.index_buffer_size: 30%
+            ingest.geoip.downloader.enabled: false
+        networks:
+            onlyoffice:
+                ipv4_address: ${IPv4_SEARCH}
+        expose:
+            - 9200
+            - 9300
+        volumes:
+            - es-data:/usr/share/elasticsearch/data
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+
+    oo-docs:
+        image: onlyoffice/documentserver:8.1
+        hostname: oo-docs
+        container_name: oo-docs
+        stdin_open: true
+        tty: true
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "curl --fail http://oo-docs:80 || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        environment:
+            JWT_ENABLED: true
+            JWT_SECRET: ${JWT_SECRET}
+            JWT_HEADER: AuthorizationJwt
+        networks:
+            onlyoffice:
+                ipv4_address: ${IPv4_DOCS}
+        expose:
+            - 80
+            - 443
+        volumes:
+            - docs-data:/var/www/onlyoffice/Data
+            - docs-log:/var/log/onlyoffice
+            - docs-forgotten:/var/lib/onlyoffice/documentserver/App_Data/cache/files/forgotten
+            - docs-fonts:/usr/share/fonts/truetype/custom
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+
+    oo-mail:
+        image: onlyoffice/mailserver:1.6.75
+        hostname: ${MAIL_SERVER_HOSTNAME}
+        container_name: oo-mail
+        privileged: true
+        stdin_open: true
+        tty: true
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "curl --fail http://oo-mail:8081 || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        depends_on:
+            oo-mysql:
+                condition: service_healthy
+        environment:
+            MYSQL_SERVER: oo-mysql
+            MYSQL_SERVER_PORT: 3306
+            MYSQL_ROOT_USER: mail_admin
+            MYSQL_ROOT_PASSWD: Isadmin123
+            MYSQL_SERVER_DB_NAME: onlyoffice_mailserver
+        networks:
+            onlyoffice:
+                ipv4_address: ${IPv4_MAIL}
+        ports: ['25:25','143:143','587:587']
+        expose:
+            - 8081
+            - 3306
+        volumes:
+            - mail-data:/var/vmail
+            - mail-certs:/etc/pki/tls/mailserver
+            - mail-log:/var/log
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+
+    oo-cpanel:
+        image: onlyoffice/controlpanel:3.5.2.530
+        hostname: oo-cpanel
+        container_name: oo-cpanel
+        stdin_open: true
+        tty: true
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "curl --fail http://oo-cpanel:80 || exit 1"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        depends_on:
+            oo-docs:
+                condition: service_healthy
+            oo-mail:
+                condition: service_healthy
+            onlyoffice:
+                condition: service_healthy
+        environment:
+            ONLYOFFICE_CORE_MACHINEKEY: ${ONLYOFFICE_CORE_MACHINEKEY}
+        networks:
+            onlyoffice:
+                ipv4_address: ${IPv4_CPANEL}
+        expose:
+            - 80
+            - 443
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - cpanel-data:/var/www/onlyoffice/Data
+            - cpanel-log:/var/log/onlyoffice
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+
+volumes:
+    oo-mysql:
+        name: oo-mysql
+        driver: local
+    oo-mysql-conf:
+        name: oo-mysql-conf
+        driver: local
+    oo-mysql-initdb:
+        name: oo-mysql-initdb
+        driver: local
+    oo-data:
+        name: oo-data
+        driver: local
+    oo-log:
+        name: oo-log
+        driver: local
+    oo-letsencrypt:
+        name: oo-letsencrypt
+        driver: local
+    oo-docs:
+        name: oo-docs
+        driver: local
+    oo-certs:
+        name: oo-certs
+        driver: local
+    es-data:
+        name: es-data
+        driver: local
+    docs-data:
+        name: docs-data
+        driver: local
+    docs-log:
+        name: docs-log
+        driver: local
+    docs-forgotten:
+        name: docs-forgotten
+        driver: local
+    docs-fonts:
+        name: docs-fonts
+        driver: local
+    mail-data:
+        name: mail-data
+        driver: local
+    mail-certs:
+        name: mail-certs
+        driver: local
+    mail-log:
+        name: mail-log
+        driver: local
+    cpanel-data:
+        name: cpanel-data
+        driver: local
+    cpanel-log:
+        name: cpanel-log
+        driver: local
+
+networks:
+    onlyoffice:
+        driver: 'bridge'
