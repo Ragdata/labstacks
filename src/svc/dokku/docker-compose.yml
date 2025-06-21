@@ -16,9 +16,10 @@ services:
             DOKKU_HOSTNAME: ${DOKKU_HOSTNAME}
             DOKKU_HOST_ROOT: /mnt/dokku/home/dokku
             DOKKU_LIB_HOST_ROOT: /mnt/dokku/var/lib/dokku
-        networks:
-            dokku:
-                ipv4_address: ${IPv4}
+        # networks:
+        #     dokku:
+        #         ipv4_address: ${IPv4}
+        network_mode: bridge
         ports:
             - "${HOST_PORT_SSH}:22"
             - "${HOST_PORT_WEB}:80"
@@ -32,11 +33,11 @@ volumes:
         name: dokku-data
         driver: local
 
-networks:
-    dokku:
-        name: dokku
-        driver: bridge
-        ipam:
-            config:
-                - subnet: ${SUBNET}
-                  gateway: ${GATEWAY}
+# networks:
+#     dokku:
+#         name: dokku
+#         driver: bridge
+#         ipam:
+#             config:
+#                 - subnet: ${SUBNET}
+#                   gateway: ${GATEWAY}
