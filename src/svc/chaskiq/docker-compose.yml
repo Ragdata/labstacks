@@ -48,33 +48,13 @@ services:
         condition: service_healthy
     volumes:
       - chaskiq-storage:/data/storage
-      - type: bind
-        source: ./entrypoint.sh
-        target: /entrypoint.sh
-        content: |
-          #!/bin/sh
-          set -e
-          rm -f /usr/src/app/tmp/pids/server.pid
-          exec "$@"
-          echo "Running database migrations..."
-          bundle exec rails db:setup || true
-          bundle exec rails db:migrate
-          echo "Finished running database migrations."
-          echo "Running packages update..."
-          bundle exec rails packages:update
-          echo "Finished packages update."
-          if [ ! -f /usr/src/app/admin_generated ]; then
-              echo "/usr/src/app/admin_generated not found, executing admin generation.."
-              bundle exec rake admin_generator
-              touch /usr/src/app/admin_generated
-              echo "Admin generation finished !"
-          fi
-          bundle exec rails s -b 0.0.0.0 -p 3000
+      - ${REPODIR}/entrypoint.sh:/entrypoint.sh
     healthcheck:
       test: ["CMD", "curl", "-f", "http://127.0.0.1:3000"]
       interval: 5s
       timeout: 20s
       retries: 15
+
   sidekiq:
     image: chaskiq/chaskiq:latest
     environment:
@@ -126,6 +106,7 @@ services:
       interval: 5s
       timeout: 10s
       retries: 15
+
   postgresql:
     image: postgres:14-alpine
     volumes:
@@ -141,6 +122,7 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+
   redis:
     image: redis:6-alpine
     restart: always
@@ -151,3 +133,14 @@ services:
       interval: 5s
       timeout: 5s
       retries: 10
+
+volumes:
+  chaskiq-storage:
+    name: chaskiq-storage
+    driver: local
+  postgresql-data:
+    name: postgresql-data
+    driver: local
+  redis-data:
+    name: redis-data
+    driver: local
