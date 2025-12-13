@@ -1,0 +1,60 @@
+api:
+  insecure: true
+  dashboard: true
+
+providers:
+  http:
+    endpoint: "http://pangolin:3001/api/v1/traefik-config"
+    pollInterval: "5s"
+  file:
+    filename: "/rules/dynamic_config.yml"
+
+experimental:
+  plugins:
+    badger:
+      moduleName: "github.com/fosrl/badger"
+      version: "v1.2.0"
+
+log:
+  level: "INFO"
+  filePath: "/logs/traefik.log"
+  format: common
+  maxSize: 100
+  maxBackups: 3
+  maxAge: 3
+  compress: true
+
+accessLog:
+  filePath: "/logs/access.log"
+  format: common
+  fields:
+    defaultMode: keep
+    headers:
+      defaultMode: keep
+
+certificatesResolvers:
+  letsencrypt:
+    acme:
+      httpChallenge:
+        entryPoint: web
+      email: "ragdata@ragdata.dev"
+      storage: "/letsencrypt/acme.json"
+      caServer: "https://acme-v02.api.letsencrypt.org/directory"
+
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
+    transport:
+      respondingTimeouts:
+        readTimeout: "30m"
+    http:
+      tls:
+        certResolver: "letsencrypt"
+
+serversTransport:
+  insecureSkipVerify: true
+
+ping:
+  entryPoint: "web"
