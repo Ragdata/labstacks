@@ -4,6 +4,9 @@ todo.txt
 .backlog
 .backburn
 
+.idea
+!.idea/icon.svg
+
 **/.env
 
 config.yml
