@@ -7,45 +7,9 @@
    preserveAspectRatio="xMidYMid"
    version="1.0"
    id="svg385"
-   sodipodi:docname="Ragdata.svg"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
-   inkscape:export-filename="Ragdata-800.png"
-   inkscape:export-xdpi="64"
-   inkscape:export-ydpi="64"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview387"
-     pagecolor="#ffffff"
-     bordercolor="#111111"
-     borderopacity="1"
-     inkscape:showpageshadow="false"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="true"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     inkscape:zoom="0.6325"
-     inkscape:cx="478.26087"
-     inkscape:cy="599.20949"
-     inkscape:window-width="1920"
-     inkscape:window-height="974"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="g11898"
-     showguides="true"
-     showborder="true"
-     borderlayer="true">
-    <inkscape:grid
-       type="xygrid"
-       id="grid11900"
-       originx="131.47265"
-       originy="-25.957029"
-       dotted="false" />
-  </sodipodi:namedview>
   <defs
      id="defs347">
     <color-profile
@@ -53,8 +17,7 @@
        xlink:href="file:///C:/WINDOWS/system32/spool/drivers/color/RSWOP.icm"
        id="color-profile848" />
     <linearGradient
-       id="linearGradient8510"
-       inkscape:swatch="solid">
+       id="linearGradient8510">
       <stop
          style="stop-color:#ffffff;stop-opacity:1;"
          offset="0"
@@ -140,12 +103,9 @@
   </defs>
   <g
      id="g555"
-     inkscape:label="Hidden Objects Group"
-     style="display:none"
-     sodipodi:insensitive="true">
+     style="display:none">
     <g
        id="g525"
-       inkscape:label="Red Dots"
        style="display:none">
       <path
          fill="#f6c541"
@@ -168,8 +128,7 @@
        clip-path="url(#a462e10575)"
        id="g371"
        transform="translate(131.47265,-27.457036)"
-       style="display:none"
-       inkscape:label="Black Shield">
+       style="display:none">
       <path
          fill="#000000"
          d="m 120.44922,212.96484 c 4.15234,29.5625 19.3125,56.03907 42.78125,74.59375 l 18.49609,14.65625 c 1.69922,1.32032 3.77344,2.01172 5.84766,2.01172 2.07812,0 4.15234,-0.6914 5.85156,-2.01172 l 18.49609,-14.65625 c 23.46875,-18.55468 38.62891,-45.03125 42.78125,-74.59375 l 8.5586,-61.38672 c 0.5664,-4.08593 -1.51172,-8.05078 -5.28516,-9.8125 l -66.375,-31.57031 c -2.51562,-1.25781 -5.53515,-1.25781 -8.05078,0 l -66.375,31.57422 c -3.77344,1.75781 -5.85156,5.72266 -5.28515,9.80859 z m 0,0"
@@ -180,7 +139,6 @@
     </g>
     <g
        id="g535"
-       inkscape:label="3 Gold Stars"
        style="display:none">
       <path
          fill="#f6ab0c"
@@ -210,8 +168,7 @@
     <g
        id="g8664"
        transform="matrix(1.1279934,0,0,1.1279934,106.59365,-73.417072)"
-       style="display:none"
-       inkscape:label="Redeye Logo">
+       style="display:none">
       <path
          id="Star - L"
          class="s0"
@@ -237,15 +194,9 @@
   <g
      id="g11898"
      transform="matrix(3.9421781,0,0,3.9421781,-289.76667,-306.33495)"
-     inkscape:export-filename="..\Ragdata\red-shield-16.png"
-     inkscape:export-xdpi="5.0459881"
-     inkscape:export-ydpi="5.0459881"
-     style="display:inline"
-     inkscape:label="Ragdata Logo Group">
+     style="display:inline">
     <g
-       id="g564"
-       inkscape:label="Red Border"
-       sodipodi:insensitive="true">
+       id="g564">
       <path
          fill="#f6c541"
          d="m 222.60937,94.773438 c -5.44921,4.167968 -10.82031,8.074222 -16.07812,11.730472 36.57422,22.71484 63.66016,32.0625 63.66016,32.0625 0,59.83984 -26.25391,115.94531 -70.63672,154.27343 54.67578,-36.85937 87.85156,-98.6289 87.85156,-165.11718 0,0 -27.75391,-9.57813 -64.79688,-32.949222"
@@ -274,8 +225,6 @@
     <g
        id="g9586"
        style="fill:#0d1117;fill-opacity:1;stroke:#0d1117;stroke-opacity:1"
-       inkscape:label="Black Shield"
-       sodipodi:insensitive="true"
        transform="translate(0.0019523)">
       <path
          fill="#f6c541"
@@ -294,16 +243,14 @@
     </g>
     <g
        id="g9580"
-       transform="translate(-0.6198577,-14.25)"
-       inkscape:label="Central Star">
+       transform="translate(-0.6198577,-14.25)">
       <path
          fill="#f6ab0c"
          d="m 188.2742,143.67578 15.85645,35.66276 c 0.60994,1.36913 1.57216,2.55014 2.78444,3.43414 1.21268,0.88405 2.63641,1.42367 4.12255,1.58005 l 38.80755,4.06795 -29.00574,26.11153 c -1.11086,1.00107 -1.94753,2.27634 -2.40951,3.70794 -0.46145,1.42366 -0.53967,2.94883 -0.22672,4.41158 l 8.12738,38.17405 -33.78551,-19.525 c -1.29849,-0.75077 -2.76871,-1.14198 -4.27089,-1.14198 -1.50183,0 -2.9723,0.39121 -4.27122,1.14198 l -33.78548,19.525 8.12763,-38.17405 c 0.31305,-1.46275 0.23482,-2.98792 -0.22691,-4.41158 -0.46938,-1.4316 -1.29854,-2.70687 -2.40898,-3.70794 l -29.00612,-26.11153 38.80735,-4.06795 c 1.48654,-0.15636 2.91021,-0.696 4.1226,-1.58005 1.21234,-0.884 2.17466,-2.06501 2.78475,-3.43414 z m 0,0"
          fill-opacity="1"
          fill-rule="evenodd"
          id="path377-0"
-         style="display:inline;fill:#d20000;fill-opacity:1;stroke-width:2.00248"
-         inkscape:label="Red Star" />
+         style="display:inline;fill:#d20000;fill-opacity:1;stroke-width:2.00248" />
       <path
          id="R - Rapscallion - W"
          class="s0"
