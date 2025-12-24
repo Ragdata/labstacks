@@ -2,7 +2,12 @@ services:
   stash:
     image: stashapp/stash:latest
     container_name: stash
+    # security options optional - uncomment if required
+    # security_opt:
+    #   - apparmor:unconfined
     restart: unless-stopped
+    networks:
+      - stash
     ## the container's port must be the same with the STASH_PORT in the environment section
     ports:
       - "9999:9999"
@@ -37,3 +42,8 @@ services:
       - ${VOL_ROOT}/blobs:/blobs
       ## Where to store generated content (screenshots,previews,transcodes,sprites)
       - ${VOL_ROOT}/generated:/generated
+
+networks:
+  stash:
+    name: stash
+    driver: bridge
