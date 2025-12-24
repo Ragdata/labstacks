@@ -8,5 +8,7 @@ todo.txt
 !.idea/icon.svg
 
 **/.env
+**/.env.*
+!**/.env.dist
 
 config.yml
