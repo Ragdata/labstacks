@@ -4,6 +4,9 @@ services:
     image: corentinth/it-tools
     hostname: it-tools
     container_name: it-tools
+    # security options optional - uncomment if required
+    # security_opt:
+    #   - apparmor:unconfined
     restart: unless-stopped
     healthcheck:
       test: ["CMD-SHELL", "curl --fail http://it-tools:80 || exit 1"]
@@ -13,7 +16,7 @@ services:
     networks:
       - it-tools
     ports:
-      - "${HOST_PORT}:80"
+      - "${HOST_PORT:-8080}:80"
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
