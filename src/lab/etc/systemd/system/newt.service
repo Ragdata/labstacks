@@ -1,0 +1,11 @@
+[Unit]
+Description=Newt
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/newt --id {{ newt.id }} --secret {{ newt.secret }} --endpoint {{ newt.endpoint }} {{ newt.docker }}
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
