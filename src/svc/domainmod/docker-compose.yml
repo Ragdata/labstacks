@@ -4,6 +4,9 @@ services:
         image: domainmod/domainmod:latest
         hostname: domainmod_app
         container_name: domainmod_app
+        # security options optional - uncomment if required
+        # security_opt:
+        #   - apparmor:unconfined
         restart: unless-stopped
         healthcheck:
             test: ["CMD-SHELL", "touch /tmp/health.txt"]
@@ -22,6 +25,8 @@ services:
             DOMAINMOD_DATABASE: domainmod
             DOMAINMOD_USER: domainmod
             DOMAINMOD_PASSWORD: ${MYSQL_PASSWORD}
+        networks:
+          - domainmod
         ports:
             - "${HOST_PORT:-8080}:80"
         volumes:
@@ -31,6 +36,9 @@ services:
         image: ghcr.io/linuxserver/mariadb:latest
         hostname: domainmod_db
         container_name: domainmod_db
+        # security options optional - uncomment if required
+        # security_opt:
+        #   - apparmor:unconfined
         restart: unless-stopped
         healthcheck:
             test: ["CMD-SHELL", "mariadb-admin ping -h localhost -u root --password=${MYSQL_ROOT_PASSWORD}"]
@@ -45,6 +53,8 @@ services:
             MYSQL_USER: domainmod
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        networks:
+          - domainmod
         ports:
             - "${DB_PORT:-3306}:3306"
         volumes:
@@ -57,3 +67,8 @@ volumes:
     domain-data:
         name: domain-data
         driver: local
+
+networks:
+  domainmod:
+    name: domainmod
+    driver: bridge
