@@ -29,7 +29,11 @@ services:
 
 volumes:
   ntfy-cache:
+    name: ntfy-cavhe
+    driver: local
   ntfy-etc:
+    name: ntfy-etc
+    driver: local
 
 networks:
   ntfy:
