@@ -10,7 +10,9 @@ services:
     container_name: ${CONTAINER_NAME}
     deploy:
       resources:
-        limits: { cpus: ${CPUS}, memory: ${MEMORY_LIMIT} }
+        limits:
+          cpus: ${CPUS}
+          memory: ${MEMORY_LIMIT}
     environment:
       MYSQL_ROOT_PASSWORD: ${PANEL_DB_ROOT_PASSWORD}
     image: mariadb:latest
