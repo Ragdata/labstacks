@@ -24,6 +24,12 @@ Hawser is a lightweight Go agent that enables Dockhand to manage Docker hosts in
 
 ## [Quick Start](#top) ⭐
 
+> [!important]
+> To install Hawser on a Server or VM, you really only need to following command:
+> ```bash
+> curl -fsSL https://raw.githubusercontent.com/Finsys/hawser/main/scripts/install.sh | bash
+>```
+
 ### _Binary_
 
 Download the latest release from [GitHub Releases](https://github.com/Finsys/hawser/releases).

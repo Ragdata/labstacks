@@ -32,33 +32,7 @@
 
 ## [App Directory](#top) ✨
 
-_Linked packages are currently available, non-linked packages are coming soon_
 
-* [Cloudflare DDNS](https://github.com/ragdata/labstacks/blob/master/cloudflare-ddns)
-* Dashy
-* [Dockwatch](https://github.com/ragdata/labstacks/blob/master/dockwatch)
-* [Dozzle](https://github.com/ragdata/labstacks/blob/master/dozzle)
-* Handbrake
-* Homarr
-* Huginn
-* [Immich](https://github.com/ragdata/labstacks/blob/master/dozzle)
-    * Immich Backup
-    * Immich Machine Learning
-    * Immich Power Tools
-    * Immich Public Proxy
-* [IT Tools](https://github.com/ragdata/labstacks/blob/master/it-tools)
-* Jekyll
-* Jekyll-GHpages
-* [Linkwarden](https://github.com/ragdata/labstacks/blob/master/linkwarden)
-* Mattermost
-* MKVToolnix
-* N8n
-* NocoDB
-* [Portainer EE](https://github.com/ragdata/labstacks/tree/master/portainer-ee)
-* Postiz
-* WikiJS
-
-<br>
 
 [`^ Top`](#top)
 
