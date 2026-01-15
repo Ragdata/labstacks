@@ -1,0 +1,33 @@
+services:
+
+    dokku:
+        image: dokku/dokku:0.35.20
+        hostname: dokku
+        container_name: dokku
+        restart: unless-stopped
+        healthcheck:
+            test: ["CMD-SHELL", "touch /tmp/health.txt"]
+            interval: 1m
+            timeout: 10s
+            retries: 3
+            start_interval: 10s
+            start_period: 1m
+        environment:
+            DOKKU_HOSTNAME: ${DOKKU_HOSTNAME}
+            DOKKU_HOST_ROOT: /mnt/dokku/home/dokku
+            DOKKU_LIB_HOST_ROOT: /mnt/dokku/var/lib/dokku
+        network_mode: bridge
+        ports:
+            - "${HOST_PORT_SSH}:22"
+            - "${HOST_PORT_WEB}:80"
+            - "${HOST_PORT_SSL}:443"
+        volumes:
+            - dokku-data:/mnt/dokku
+            - /var/run/docker.sock:/var/run/docker.sock
+            - /etc/localtime:/etc/localtime:ro
+            - /etc/timezone:/etc/timezone:ro
+
+volumes:
+    dokku-data:
+        name: dokku-data
+        driver: local

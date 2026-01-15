@@ -1,0 +1,12 @@
+services:
+
+    atlas:
+        image: keinstien/atlas:latest
+        container_name: atlas
+        restart: unless-stopped
+        cap_add:
+            - NET_RAW
+            - NET_ADMIN
+        network_mode: host
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
