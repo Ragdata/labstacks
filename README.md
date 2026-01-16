@@ -30,6 +30,12 @@
 
 </div>
 
+> [!warning]
+> Ensure subtree elements are updated regularly using the following command:
+> ```bash
+> git subtree pull --prefix=src/svc compose master --squash
+>```
+
 ## [App Directory](#top) ✨
 
 
@@ -186,7 +192,7 @@ SOFTWARE.
 
 <div align="center">
 
-<a href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fragdata%2Flabstacks" target="_blank"><img alt="Visitors" src="https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Fragdata%2Flabstacks&countColor=%23d20000" /></a>
+<a href="https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fragdata%2Flabstacks" target="_blank"><img alt="Visitors" src="https://api.visitorbadge.io/api/combined?labelColor=31383f&path=https%3A%2F%2Fgithub.com%2Fragdata%2Flabstacks&countColor=%23d20000" /></a>
 <a href="https://github.com/Ragdata" target="_blank"><img alt="Ragdata" src="https://img.shields.io/badge/-Made_With_☕_By_Ragdata-D20000?style=for-the-badge" /></a>
 
 <h4>
@@ -207,15 +213,15 @@ Copyright &copy; 2025 Redeyed Technologies
 [repo]: https://github.com/ragdata/labstacks -->
 
 [pre-release]: https://img.shields.io/badge/Status-Pre--Release-d20000?labelColor=31383f
-[issues-badge]: https://img.shields.io/github/issues-raw/ragdata/labstacks?style=for-the-badge&logo=github
-[license-badge]: https://img.shields.io/badge/License-MIT-gold?style=for-the-badge
-[last-commit]: https://img.shields.io/github/last-commit/ragdata/labstacks/master?style=for-the-badge
+[issues-badge]: https://img.shields.io/github/issues-raw/ragdata/labstacks?labelColor=31383f&style=for-the-badge&logo=github
+[license-badge]: https://img.shields.io/badge/License-MIT-gold?labelColor=31383f&style=for-the-badge
+[last-commit]: https://img.shields.io/github/last-commit/ragdata/labstacks/master?labelColor=31383f&style=for-the-badge
 <!-- [version-badge]: https://img.shields.io/badge/dynamic/yaml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fragdata%2Flabstacks%2Fmaster%2F.releaserc&query=%24.version&prefix=v&label=Version&labelColor=31383f&color=cd4800 -->
 
 [issues]: https://github.com/ragdata/labstacks/issues
 [mit-license]: https://choosealicense.com/licenses/mit/
 
-[wakatime-badge]: https://wakatime.com/badge/user/7e04d9d4-3a44-495e-b622-69fdbafd036c/project/57b4a67e-9f5a-412d-996d-80dfb185c607.svg?style=for-the-badge
+[wakatime-badge]: https://wakatime.com/badge/user/7e04d9d4-3a44-495e-b622-69fdbafd036c/project/57b4a67e-9f5a-412d-996d-80dfb185c607.svg?labelColor=31383f&style=for-the-badge
 [wakatime-repo]: https://wakatime.com/badge/user/7e04d9d4-3a44-495e-b622-69fdbafd036c/project/57b4a67e-9f5a-412d-996d-80dfb185c607
 
 [advisory]: https://github.com/ragdata/labstacks/security/advisories/new
