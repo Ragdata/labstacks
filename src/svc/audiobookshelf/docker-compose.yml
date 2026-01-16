@@ -1,4 +1,12 @@
-version: "3.8"
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   audiobookshelf:
     image: ghcr.io/advplyr/audiobookshelf:2.19.4
@@ -14,4 +22,4 @@ services:
 
 volumes:
   config: {}
-  metadata: {} 
+  metadata: {}

@@ -31,7 +31,7 @@ services:
       ## E.g. you can change ./config:/root/.stash to ./stash:/root/.stash
 
       ## Keep configs, scrapers, and plugins here.
-      - ${VOL_ROOT}/config:/root/.stash
+      - /root/.stash:/root/.stash
       ## Point this at your collection.
       - ${VOL_ROOT}/data:/data
       ## This is where your stash's metadata lives

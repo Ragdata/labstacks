@@ -1,4 +1,12 @@
-version: "3.8"
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   anythingllm:
     image: mintplexlabs/anythingllm:latest
@@ -13,4 +21,4 @@ services:
       - SYS_ADMIN
 
 volumes:
-  storage: {} 
+  storage: {}

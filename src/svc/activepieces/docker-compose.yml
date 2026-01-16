@@ -1,5 +1,12 @@
-version: "3.8"
-
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   activepieces:
     image: activepieces/activepieces:0.35.0
@@ -61,4 +68,4 @@ services:
 
 volumes:
   postgres_data:
-  redis_data: 
+  redis_data:

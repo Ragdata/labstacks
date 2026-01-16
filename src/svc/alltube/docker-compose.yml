@@ -1,4 +1,12 @@
-version: "3.8"
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   alltube:
     image: dnomd343/alltube:latest
@@ -9,4 +17,4 @@ services:
       - TITLE=${TITLE}
       - CONVERT=${CONVERT}
       - STREAM=${STREAM}
-      - REMUX=${REMUX} 
+      - REMUX=${REMUX}

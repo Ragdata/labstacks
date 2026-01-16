@@ -1,4 +1,12 @@
-version: "3.8"
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   automatisch:
     image: dockeriddonuts/automatisch:2.0
@@ -70,4 +78,4 @@ services:
 volumes:
   storage: {}
   postgres_data: {}
-  redis_data: {} 
+  redis_data: {}

@@ -1,4 +1,12 @@
-version: "3.8"
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   argilla-web:
     image: argilla/argilla-server:latest
@@ -74,4 +82,4 @@ volumes:
   argilladata: {}
   elasticdata: {}
   dbdata: {}
-  redisdata: {} 
+  redisdata: {}

@@ -1,5 +1,12 @@
-version: "3.8"
-
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 x-logging: &x-logging
   logging:
     driver: "json-file"

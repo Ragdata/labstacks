@@ -1,5 +1,12 @@
-version: "3"
-
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   ackee:
     image: electerious/ackee:3.4.2
@@ -9,7 +16,7 @@ services:
       - ACKEE_USERNAME=${ACKEE_USERNAME}
       - ACKEE_PASSWORD=${ACKEE_PASSWORD}
       - ACKEE_MONGODB=${ACKEE_MONGODB}
-  
+
   mongo:
     image: mongo:4
     environment:
@@ -21,4 +28,4 @@ services:
 
 volumes:
   mongo-data:
-     
+

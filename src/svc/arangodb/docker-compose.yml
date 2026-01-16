@@ -1,4 +1,12 @@
-version: "3.8"
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   arangodb:
     image: arangodb:3.12.4
@@ -11,4 +19,4 @@ services:
       - data:/var/lib/arangodb3
 
 volumes:
-  data: {} 
+  data: {}
