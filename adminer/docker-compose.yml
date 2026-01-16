@@ -1,7 +1,15 @@
-version: "3.8"
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   adminer:
     image: adminer:4.8.1
     restart: unless-stopped
     ports:
-      - 8080 
+      - 8080

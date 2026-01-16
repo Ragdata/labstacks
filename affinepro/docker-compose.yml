@@ -1,4 +1,12 @@
-version: "3.8"
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   affinepro:
     image: ghcr.io/toeverything/affine-graphql:stable-780dd83
@@ -62,4 +70,4 @@ volumes:
   affine-storage: {}
   affine-config: {}
   postgres-data: {}
-  redis-data: {} 
+  redis-data: {}

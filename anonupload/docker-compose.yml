@@ -1,4 +1,12 @@
-version: "3.8"
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   anonupload:
     image: ghcr.io/supernova3339/anonfiles:1
@@ -13,4 +21,4 @@ services:
       - uploads:/var/www/html/uploads
 
 volumes:
-  uploads: {} 
+  uploads: {}

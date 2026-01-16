@@ -1,4 +1,12 @@
-version: "3.8"
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   ampache:
     image: ampache/ampache:latest
@@ -14,4 +22,4 @@ services:
 volumes:
   config: {}
   log: {}
-  mysql: {} 
+  mysql: {}

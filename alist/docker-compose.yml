@@ -1,14 +1,36 @@
-version: '3.3'
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   alist:
-    image: xhofe/alist:v3.41.0
+    image: xhofe/alist-aria2:latest
+    # image: xhofe/alist:latest
+    container_name: alist
     volumes:
       - alist-data:/opt/alist/data
+    networks:
+      - alist
+    ports:
+      - '5244:5244'
     environment:
       - PUID=0
       - PGID=0
       - UMASK=022
+      - TZ=Australia/Brisbane
     restart: unless-stopped
 
 volumes:
   alist-data:
+    name: alist-data
+    driver: local
+
+networks:
+  alist:
+    name: alist
+    driver: bridge
