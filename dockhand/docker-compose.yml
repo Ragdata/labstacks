@@ -15,6 +15,7 @@ services:
   dockhand:
     image: fnsys/dockhand:latest
     container_name: dockhand
+    user: "0:0"
     networks:
       - dockhand
     ports:
