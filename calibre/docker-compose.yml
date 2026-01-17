@@ -1,5 +1,12 @@
-version: '3.8'
-
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   calibre:
     image: linuxserver/calibre:7.26.0
@@ -17,4 +24,4 @@ services:
 
 volumes:
   books:
-  data: 
+  data:

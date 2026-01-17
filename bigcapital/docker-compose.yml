@@ -1,3 +1,12 @@
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   webapp:
     image: bigcapitalhq/webapp:latest

@@ -1,5 +1,12 @@
-version: "3"
-
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   chromium:
     image: lscr.io/linuxserver/chromium:5f5dd27e-ls102
@@ -13,4 +20,4 @@ services:
       - config:/config
 
 volumes:
-  config: 
+  config:

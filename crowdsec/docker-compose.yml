@@ -1,3 +1,12 @@
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 # --------------------------------------------------------------------------------
 # note: this is the minimal crowdsec container
 # this compose file prepared to work with two key remediation engines
@@ -21,7 +30,7 @@ services:
     security_opt:
       - no-new-privileges:true
     # uncomment these two lines if you intent to use firewall bouncer installed natively on the host
-    # ports: 
+    # ports:
     #  - "127.0.0.1:8080:8080" # local binding only, necessary for firewall-iptables-bouncer to connect to container's lapi
     labels:
       - traefik.enable=false

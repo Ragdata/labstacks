@@ -1,5 +1,12 @@
-version: '3.8'
-
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   carbone:
     image: carbone/carbone-ee:full-4.25.5
@@ -13,4 +20,4 @@ services:
       - template:/app/template
 
 volumes:
-  template: 
+  template:

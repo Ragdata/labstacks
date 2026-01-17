@@ -1,5 +1,12 @@
-version: '3'
-
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 x-base-config: &base-config
   image: chatwoot/chatwoot:v4.0.3
   volumes:

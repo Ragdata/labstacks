@@ -1,5 +1,12 @@
-version: "3"
-
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   classicpress:
     image: classicpress/classicpress:php8.3-apache
@@ -27,4 +34,4 @@ services:
 
 volumes:
   wordpress-data:
-  db-data: 
+  db-data:

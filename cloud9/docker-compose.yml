@@ -1,5 +1,12 @@
-version: "3"
-
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   cloud9:
     image: lscr.io/linuxserver/cloud9:1.29.2
@@ -17,4 +24,4 @@ services:
       - code:/code
 
 volumes:
-  code: 
+  code:

@@ -1,4 +1,12 @@
-version: "3.8"
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   bytebase:
     image: bytebase/bytebase:3.3.0
@@ -24,4 +32,4 @@ services:
 
 volumes:
   data: {}
-  db_data: {} 
+  db_data: {}

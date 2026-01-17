@@ -1,4 +1,12 @@
-version: "3.8"
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   beszel:
     image: henrygd/beszel:0.10.2
@@ -10,4 +18,4 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
 volumes:
-  beszel_data: {} 
+  beszel_data: {}

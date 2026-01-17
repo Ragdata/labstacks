@@ -1,5 +1,12 @@
-version: "3"
-
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   coral:
     image: coralproject/talk:9.7.0
@@ -30,4 +37,4 @@ services:
 
 volumes:
   mongo-data:
-  redis-data: 
+  redis-data:

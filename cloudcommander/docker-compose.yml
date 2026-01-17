@@ -1,5 +1,12 @@
-version: "3"
-
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   cloudcmd:
     image: coderaiser/cloudcmd:18.5.1
@@ -12,4 +19,4 @@ services:
       - CLOUDCMD_PASSWORD=${PASSWORD}
     volumes:
       - /root:/root
-      - /:/mnt/fs 
+      - /:/mnt/fs
