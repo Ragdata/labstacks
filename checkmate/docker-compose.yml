@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Checkmate
+# description: Backend and database stack for Checkmate — monitoring/uptime service with a MongoDB-backed API.
+# category: monitoring
+# tags: monitoring, uptime, api, mongodb, node
+# website: https://github.com/bluewave-labs/checkmate
+# docs: https://github.com/bluewave-labs/checkmate#readme
+# repo: https://github.com/bluewave-labs/checkmate
 ---
 services:
   server:

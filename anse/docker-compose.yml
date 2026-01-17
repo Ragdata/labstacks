@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Anse (demo)
+# description: Lightweight demo frontend for Anse — a local OpenAI-based demo application.
+# category: ai
+# tags: ai, demo, openai, web
+# website: https://github.com/ddiu8081/anse
+# docs: https://github.com/ddiu8081/anse#readme
+# repo: https://github.com/ddiu8081/anse
 ---
 services:
   anse-demo:

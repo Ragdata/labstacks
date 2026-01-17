@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Beszel
+# description: Web UI/dashboard for managing and monitoring services (container-focused monitoring and utilities).
+# category: monitoring
+# tags: monitoring, dashboard, docker, containers, ui
+# website: https://github.com/henrygd/beszel
+# docs: https://github.com/henrygd/beszel#readme
+# repo: https://github.com/henrygd/beszel
 ---
 services:
   beszel:

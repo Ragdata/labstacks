@@ -1,11 +1,10 @@
 # name: Bluesky PDS
-# logo: bluesky.png
-# description: Bluesky PDS (Personal Data Server)
+# description: Bluesky Personal Data Server (PDS) implementation for hosting user data and providing APIs for Bluesky clients.
 # category: backend
-# tags: bluesky, pds, platform
-# website:
+# tags: bluesky, pds, social, federation
+# website: https://bluesky.social
 # docs: https://github.com/bluesky-social/pds
-# repo:
+# repo: https://github.com/bluesky-social/pds
 ---
 services:
   pds:

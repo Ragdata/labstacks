@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Atlas
+# description: Container that provides a lightweight host-level tooling/monitoring utility (runs in host network mode).
+# category: utilities
+# tags: monitoring, docker, host, tools
+# website: https://github.com/keinstien/atlas
+# docs: https://github.com/keinstien/atlas#readme
+# repo: https://github.com/keinstien/atlas
 ---
 services:
 

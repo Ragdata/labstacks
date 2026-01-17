@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Authorizer
+# description: Open-source authentication and authorization server for managing tokens, users and sessions.
+# category: auth
+# tags: auth, oauth, jwt, oauth2, open-source
+# website: https://authorizer.dev
+# docs: https://github.com/lakhansamani/authorizer#readme
+# repo: https://github.com/lakhansamani/authorizer
 ---
 services:
   authorizer:

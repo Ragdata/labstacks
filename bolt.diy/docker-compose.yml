@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Bolt.diy
+# description: Local Bolt.diy web app for LLM orchestration and integrations (front-end container).
+# category: ai
+# tags: llm, ai, web, node, nextjs
+# website: https://github.com/stackblitz-labs/bolt.diy
+# docs: https://github.com/stackblitz-labs/bolt.diy#readme
+# repo: https://github.com/stackblitz-labs/bolt.diy
 ---
 services:
   app:

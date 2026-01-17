@@ -1,17 +1,15 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Castopod
+# description: Open-source podcast hosting and publishing platform for self-hosted podcast sites and media management.
+# category: media
+# tags: podcast, hosting, audio, rss, media
+# website: https://castopod.org
+# docs: https://docs.castopod.org
+# repo: https://github.com/castopod/castopod
 ---
 # documentation:https://docs.castopod.org/main/en/
 # slogan: Castopod is a free & open-source hosting platform made for podcasters who want engage and interact with their audience.
 # category: media
 # tags: podcast, media, audio, video, streaming, hosting, platform, castopod
-# logo: svgs/castopod.svg
 # port: 8000
 
 services:

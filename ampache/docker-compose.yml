@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Ampache
+# description: Web-based audio/video streaming and media catalog system for personal media libraries.
+# category: media
+# tags: music, media-server, streaming, php
+# website: https://ampache.org
+# docs: https://ampache.org/docs
+# repo: https://github.com/ampache/ampache
 ---
 services:
   ampache:

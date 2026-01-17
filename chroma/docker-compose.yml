@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Chroma
+# description: Open-source vector database for embeddings, semantic search and retrieval used with LLM applications.
+# category: ai
+# tags: vector-database, embeddings, semantic-search, ai, chromadb
+# website: https://www.trychroma.com
+# docs: https://cookbook.chromadb.dev/
+# repo: https://github.com/chroma-core/chromadb
 ---
 # documentation: https://cookbook.chromadb.dev/
 # slogan: Chroma is the open-source search and retrieval database for AI applications.

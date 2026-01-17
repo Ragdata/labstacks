@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Chibisafe
+# description: Self-hosted imageboard/media gallery application with uploads, user accounts and moderation tools.
+# category: media
+# tags: imageboard, gallery, uploads, self-hosted, django
+# website: https://chibisafe.app
+# docs: https://chibisafe.app/docs/intro
+# repo: https://github.com/chibisafe/chibisafe
 ---
 # https://chibisafe.app/docs/intro
 #

@@ -1,11 +1,10 @@
 # name: Budge
-# logo: budge.png
 # description: A budgeting personal finance app.
-# category: productivity
-# tags: personal finance, budgeting, expense tracking
-# website:
-# docs: https://github.com/linuxserver/budge
-# repo:
+# category: finance
+# tags: personal-finance, budgeting, expenses, linuxserver
+# website: https://www.linuxserver.io
+# docs: https://github.com/linuxserver/docker-budge#readme
+# repo: https://github.com/linuxserver/docker-budge
 ---
 services:
   budge:

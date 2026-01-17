@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Argilla
+# description: Data labeling and annotation platform for NLP datasets and model evaluation.
+# category: ml
+# tags: annotation, nlp, labeling, dataset, evaluation
+# website: https://argilla.io
+# docs: https://github.com/argilla/argilla#readme
+# repo: https://github.com/argilla/argilla
 ---
 services:
   argilla-web:

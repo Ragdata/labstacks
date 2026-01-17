@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Atlassian Confluence
+# description: Team collaboration wiki and documentation server for creating, organizing and sharing content.
+# category: collaboration
+# tags: confluence, wiki, documentation, atlassian
+# website: https://www.atlassian.com/software/confluence
+# docs: https://confluence.atlassian.com/doc
+# repo: https://hub.docker.com/r/atlassian/confluence-server
 ---
 services:
   confluence:

@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Budibase
+# description: Open-source low-code platform for building internal tools and business apps.
+# category: low-code
+# tags: low-code, apps, couchdb, redis, minio
+# website: https://www.budibase.com
+# docs: https://docs.budibase.com
+# repo: https://github.com/Budibase/budibase
 ---
 services:
   apps:

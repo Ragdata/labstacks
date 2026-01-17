@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Blender (container)
+# description: Containerized Blender environment with GPU support for 3D rendering and content creation.
+# category: graphics
+# tags: blender, 3d, rendering, gpu, nvidia
+# website: https://www.blender.org
+# docs: https://docs.blender.org
+# repo: https://github.com/linuxserver/docker-blender
 ---
 services:
   blender:

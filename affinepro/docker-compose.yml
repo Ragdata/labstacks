@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Affine Pro
+# description: Self-hosted collaborative knowledge/workspace backend (GraphQL service) with Postgres and Redis.
+# category: collaboration
+# tags: notes, collaboration, graph, graphql, postgres, redis
+# website: https://github.com/toeverything/affine
+# docs: https://github.com/toeverything/affine#readme
+# repo: https://github.com/toeverything/affine
 ---
 services:
   affinepro:

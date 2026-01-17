@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: CrowdSec (minimal)
+# description: CrowdSec lightweight intrusion detection agent with support for external bouncers and remediation.
+# category: security
+# tags: ids, crowdsec, bouncer, intrusion-detection, monitoring
+# website: https://www.crowdsec.net
+# docs: https://docs.crowdsec.net
+# repo: https://github.com/crowdsecurity/crowdsec
 ---
 # --------------------------------------------------------------------------------
 # note: this is the minimal crowdsec container

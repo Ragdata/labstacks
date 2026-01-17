@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Audiobookshelf
+# description: Self-hosted audiobook and audio library server with web UI and mobile support.
+# category: media
+# tags: audiobooks, media-server, streaming, library
+# website: https://audiobookshelf.org
+# docs: https://github.com/advplyr/audiobookshelf#readme
+# repo: https://github.com/advplyr/audiobookshelf
 ---
 services:
   audiobookshelf:

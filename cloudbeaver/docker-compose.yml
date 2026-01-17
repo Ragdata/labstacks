@@ -1,17 +1,15 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: CloudBeaver
+# description: Web-based database management UI built on DBeaver for managing SQL and NoSQL databases.
+# category: devtools
+# tags: database, admin, sql, dbeaver, web-ui
+# website: https://dbeaver.com/cloudbeaver
+# docs: https://dbeaver.com/docs/cloudbeaver/
+# repo: https://github.com/dbeaver/cloudbeaver
 ---
 # documentation: https://dbeaver.com/docs/cloudbeaver/
 # slogan: CloudBeaver is a lightweight web application designed for comprehensive data management.
 # category: devtools
 # tags: dbeaver, data management, data, database, mysql, postgres, sqlite, sql, mongodb
-# logo: svgs/cloudbeaver.svg
 # port: 8978
 
 services:

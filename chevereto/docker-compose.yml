@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Chevereto
+# description: Image hosting platform for creating self-hosted image upload sites and galleries.
+# category: media
+# tags: image-hosting, photos, galleries, php, mysql
+# website: https://chevereto.com
+# docs: https://chevereto.com/docs
+# repo: https://github.com/Chevereto/Chevereto
 ---
 services:
   chevereto:

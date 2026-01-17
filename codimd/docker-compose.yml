@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: CodiMD (HackMD)
+# description: Realtime collaborative Markdown editor for notes and documentation with live multi-user editing.
+# category: productivity
+# tags: markdown, collaborative, notes, realtime, editor
+# website: https://hackmd.io
+# docs: https://hackmd.io/docs
+# repo: https://github.com/hackmdio/codimd
 ---
 # documentation: https://hackmd.io/c/codimd-documentation
 # slogan: Realtime collaborative markdown notes on all platforms

@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: ClickHouse
+# description: High-performance columnar database for analytics and OLAP workloads.
+# category: database
+# tags: clickhouse, analytics, columnar, database, oltp, olap
+# website: https://clickhouse.com
+# docs: https://clickhouse.com/docs/en/
+# repo: https://github.com/ClickHouse/ClickHouse
 ---
 services:
   clickhouse:
@@ -21,4 +20,3 @@ services:
 volumes:
   clickhouse-data:
   clickhouse-logs:
-

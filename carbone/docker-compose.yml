@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Carbone
+# description: Template-driven document generation service (Carbone) for producing PDFs/Office documents from templates.
+# category: documents
+# tags: document-generation, pdf, templates, carbone
+# website: https://carbone.io
+# docs: https://carbone.io/docs
+# repo: https://github.com/CarboneIO/carbone
 ---
 services:
   carbone:

@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Casdoor
+# description: Identity and access management platform providing authentication, SSO and RBAC (Casbin/Casdoor).
+# category: auth
+# tags: auth, identity, sso, oauth, casbin
+# website: https://casdoor.org
+# docs: https://github.com/casbin/casdoor#readme
+# repo: https://github.com/casbin/casdoor
 ---
 services:
   casdoor:

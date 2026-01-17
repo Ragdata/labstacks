@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Concrete CMS
+# description: PHP-based content management system for building websites and applications (formerly Concrete5).
+# category: cms
+# tags: cms, php, concretecms, mariadb, web
+# website: https://www.concretecms.org
+# docs: https://documentation.concretecms.org
+# repo: https://github.com/concretecms/concrete5
 ---
 services:
   concretecms:

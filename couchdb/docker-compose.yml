@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: CouchDB
+# description: Apache CouchDB — document-oriented NoSQL database with HTTP API and replication.
+# category: database
+# tags: couchdb, nosql, document-db, replication
+# website: https://couchdb.apache.org
+# docs: https://docs.couchdb.org
+# repo: https://github.com/apache/couchdb
 ---
 services:
   couchdb:

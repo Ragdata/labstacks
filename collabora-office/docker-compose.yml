@@ -1,11 +1,11 @@
-# name:
+# name: Collabora Online (Collabora Office)
 # logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# description: Web-based collaborative office suite (LibreOffice Online) for editing documents, spreadsheets and presentations.
+# category: office
+# tags: office, libreoffice, collaborative, documents, spreadsheets
+# website: https://www.collaboraoffice.com
+# docs: https://www.collaboraoffice.com/code/
+# repo: https://github.com/CollaboraOnline/online
 ---
 services:
   collabora:

@@ -1,11 +1,11 @@
-# name:
+# name: Conduit
 # logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# description: Lightweight Matrix homeserver implementation written in Rust for scalable messaging (RocksDB backend option).
+# category: chat
+# tags: matrix, homeserver, rust, messaging
+# website: https://conduit.rs
+# docs: https://docs.conduit.rs
+# repo: https://gitlab.com/famedly/conduit
 ---
 # From Conduit's official documentation: https://docs.conduit.rs/deploying/docker.html#docker-compose
 services:

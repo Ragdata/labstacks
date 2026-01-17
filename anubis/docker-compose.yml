@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Anubis
+# description: Bot-check / human verification gateway to protect frontends and prevent automated abuse.
+# category: security
+# tags: captcha, anti-bot, verification, gateway
+# website: https://github.com/techarohq/anubis
+# docs: https://github.com/techarohq/anubis#readme
+# repo: https://github.com/techarohq/anubis
 ---
 services:
   anubis:

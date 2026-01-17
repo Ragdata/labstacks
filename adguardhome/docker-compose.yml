@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: AdGuard Home
+# description: Network-wide ads and trackers blocking DNS server with web UI.
+# category: network
+# tags: dns, ad-blocker, privacy, network
+# website: https://adguard.com
+# docs: https://github.com/AdguardTeam/AdGuardHome#readme
+# repo: https://github.com/AdguardTeam/AdGuardHome
 ---
 services:
   adguardhome:

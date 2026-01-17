@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Automatisch
+# description: Self‑hosted link management and social bookmarking platform (backend + worker) using Postgres and Redis.
+# category: productivity
+# tags: bookmarking, links, postgres, redis, worker
+# website: https://github.com/dockeriddonuts/automatisch
+# docs: https://github.com/dockeriddonuts/automatisch#readme
+# repo: https://github.com/dockeriddonuts/automatisch
 ---
 services:
   automatisch:

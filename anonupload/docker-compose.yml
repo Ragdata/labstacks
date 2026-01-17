@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: AnonUpload
+# description: Self-hosted anonymous file upload service compatible with anonfiles-style uploads.
+# category: file-sharing
+# tags: uploads, anonymous, file-sharing, web
+# website: https://github.com/supernova3339/anonfiles
+# docs: https://github.com/supernova3339/anonfiles#readme
+# repo: https://github.com/supernova3339/anonfiles
 ---
 services:
   anonupload:

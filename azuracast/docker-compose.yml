@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: AzuraCast
+# description: Self-hosted web radio management suite for streaming, station automation and media management.
+# category: media
+# tags: radio, streaming, icecast, shoutcast, mariadb
+# website: https://www.azuracast.com
+# docs: https://www.azuracast.com/help
+# repo: https://github.com/AzuraCast/AzuraCast
 ---
 services:
   azuracast:

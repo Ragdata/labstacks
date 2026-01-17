@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Agent DVR
+# description: Self-hosted NVR (network video recorder) for IP cameras with web UI and recording features.
+# category: surveillance
+# tags: nvr, camera, surveillance, recording, rtsp
+# website: https://www.ispyconnect.com/agentdvr.html
+# docs: https://www.ispyconnect.com/agentdvr.html
+# repo: https://github.com/mekayelanik/ispyagentdvr
 ---
 services:
   agentdvr:

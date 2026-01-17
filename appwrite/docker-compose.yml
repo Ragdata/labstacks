@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Appwrite
+# description: Self-hosted backend server providing authentication, database, storage, functions and more.
+# category: backend
+# tags: backend, auth, storage, functions, self-hosted
+# website: https://appwrite.io
+# docs: https://appwrite.io/docs
+# repo: https://github.com/appwrite/appwrite
 ---
 x-logging: &x-logging
   logging:

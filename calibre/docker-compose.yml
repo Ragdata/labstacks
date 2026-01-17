@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Calibre (linuxserver)
+# description: Calibre e-book management server packaged by LinuxServer for managing and serving ebook libraries.
+# category: books
+# tags: ebooks, library, calibre, linuxserver
+# website: https://calibre-ebook.com
+# docs: https://github.com/linuxserver/docker-calibre#readme
+# repo: https://github.com/linuxserver/docker-calibre
 ---
 services:
   calibre:

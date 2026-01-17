@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Coder
+# description: Remote development platform for provisioning and managing containerized VS Code workspaces.
+# category: devtools
+# tags: coder, remote-development, workspaces, containers, postgres
+# website: https://coder.com
+# docs: https://coder.com/docs
+# repo: https://github.com/coder/coder
 ---
 services:
   coder:

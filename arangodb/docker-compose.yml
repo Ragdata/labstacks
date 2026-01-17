@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: ArangoDB
+# description: Native multi-model database (graph, document, key-value) for transactional and analytical workloads.
+# category: database
+# tags: database, graph, nosql, document, multi-model
+# website: https://www.arangodb.com
+# docs: https://www.arangodb.com/docs/
+# repo: https://github.com/arangodb/arangodb
 ---
 services:
   arangodb:

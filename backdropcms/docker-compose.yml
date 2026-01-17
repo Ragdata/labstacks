@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Backdrop CMS
+# description: Open-source content management system forked from Drupal, focused on small-to-medium sites.
+# category: cms
+# tags: cms, php, drupal, content-management
+# website: https://backdropcms.org
+# docs: https://backdropcms.org/guide
+# repo: https://github.com/backdrop/backdrop
 ---
 services:
   backdrop:

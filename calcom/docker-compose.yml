@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Cal.com
+# description: Open-source scheduling and booking platform (self-hosted calendar/scheduling webapp).
+# category: productivity
+# tags: scheduling, calendar, bookings, nextjs, postgres
+# website: https://cal.com
+# docs: https://cal.com/docs
+# repo: https://github.com/calcom/cal.com
 ---
 services:
   postgres:

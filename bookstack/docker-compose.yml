@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: BookStack
+# description: Documentation/wiki platform for creating and organizing documentation, books and notes.
+# category: knowledge-base
+# tags: wiki, documentation, php, mariadb, mysql
+# website: https://www.bookstackapp.com
+# docs: https://www.bookstackapp.com/docs
+# repo: https://github.com/BookStackApp/BookStack
 ---
 services:
   bookstack:

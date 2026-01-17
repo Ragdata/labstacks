@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Activepieces
+# description: Open-source low-code automation and workflow builder for self-hosted automation.
+# category: automation
+# tags: automation, workflow, low-code, self-hosted
+# website: https://activepieces.com
+# docs: https://docs.activepieces.com
+# repo: https://github.com/Activepieces/activepieces
 ---
 services:
   activepieces:

@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Ackee
+# description: Self-hosted, privacy-friendly web analytics platform.
+# category: analytics
+# tags: analytics, tracking, self-hosted, privacy
+# website: https://ackee.electerious.org
+# docs: https://docs.ackee.electerious.org
+# repo: https://github.com/electerious/ackee
 ---
 services:
   ackee:
@@ -28,4 +27,3 @@ services:
 
 volumes:
   mongo-data:
-

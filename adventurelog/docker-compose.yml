@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: AdventureLog
+# description: Self-hosted trip journaling and travel planning app (React frontend + Django/PostGIS backend).
+# category: productivity
+# tags: travel, journaling, diary, django, react, postgis
+# website: https://github.com/seanmorley15/adventurelog
+# docs: https://github.com/seanmorley15/adventurelog#readme
+# repo: https://github.com/seanmorley15/adventurelog
 ---
 services:
   web:

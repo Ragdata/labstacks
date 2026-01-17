@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Convex (backend & dashboard)
+# description: Convex backend and dashboard for realtime backend-as-a-service functionality.
+# category: backend
+# tags: backend, realtime, dashboard, convex
+# website: https://convex.dev
+# docs: https://docs.convex.dev
+# repo: https://github.com/convex-dev/convex
 ---
 services:
   backend:

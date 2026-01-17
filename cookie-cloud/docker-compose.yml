@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: CookieCloud
+# description: Cookie management and sharing service with a web API and persistent data storage.
+# category: utilities
+# tags: cookies, sharing, api, web, storage
+# website: https://github.com/easychen/cookiecloud
+# docs: https://github.com/easychen/cookiecloud#readme
+# repo: https://github.com/easychen/cookiecloud
 ---
 services:
   cookiecloud:

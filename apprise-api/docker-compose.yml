@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Apprise API
+# description: Notification delivery API supporting dozens of services (Slack, Email, SMS, etc.).
+# category: notifications
+# tags: notifications, alerts, api, web
+# website: https://github.com/caronc/apprise-api
+# docs: https://github.com/caronc/apprise-api#readme
+# repo: https://github.com/caronc/apprise-api
 ---
 services:
   apprise:

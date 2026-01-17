@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Crawl4AI
+# description: Web crawler and data collection service designed for building datasets for AI applications.
+# category: ai
+# tags: crawler, scraping, ai, dataset, web
+# website: https://github.com/unclecode/crawl4ai
+# docs: https://github.com/unclecode/crawl4ai#readme
+# repo: https://github.com/unclecode/crawl4ai
 ---
 services:
   crawl4ai:

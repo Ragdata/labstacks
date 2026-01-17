@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Conduwuit
+# description: Community fork/variant of a Matrix homeserver (Conduit family) for self-hosting Matrix services.
+# category: chat
+# tags: matrix, homeserver, federation, rust
+# website: https://conduwuit.puppyirl.gay
+# docs: https://conduwuit.puppyirl.gay/deploying/
+# repo: https://github.com/girlbossceo/conduwuit
 ---
 # conduwuit
 # https://conduwuit.puppyirl.gay/deploying/docker-compose.yml
