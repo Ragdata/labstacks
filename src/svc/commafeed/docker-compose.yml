@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: CommaFeed
+# description: Self-hosted RSS/Atom feed reader with a simple web UI for following news and sites.
+# category: rss
+# tags: rss, feeds, reader, news, self-hosted
+# website: https://commafeed.com
+# docs: https://github.com/akrennmair/commafeed#readme
+# repo: https://github.com/akrennmair/commafeed
 ---
 services:
   commafeed:

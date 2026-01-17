@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Coral Talk
+# description: Discussion and commenting platform with moderation tooling for community conversations.
+# category: comments
+# tags: comments, moderation, nodejs, mongo, redis
+# website: https://coralproject.net
+# docs: https://github.com/coralproject/talk#readme
+# repo: https://github.com/coralproject/talk
 ---
 services:
   coral:

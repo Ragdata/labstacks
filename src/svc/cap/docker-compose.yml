@@ -1,16 +1,14 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Cap
+# description: Open-source Loom alternative for quick screen recording, sharing and lightweight video capture.
+# category: media
+# tags: screen-recording, video, loom, sharing
+# website: https://cap.so
+# docs: https://cap.so/docs
+# repo: https://github.com/cap-so/cap
 ---
 # documentation: https://cap.so
 # slogan: Cap is the open source alternative to Loom. Lightweight, powerful, and cross-platform. Record and share in seconds.
 # tags: cap,loom,open,source,low,code
-# logo: svgs/cap.svg
 # port: 5679
 
 # Storage Configuration:

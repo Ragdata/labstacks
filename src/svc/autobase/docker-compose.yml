@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Autobase Console
+# description: Web console for Autobase — Ansible-driven automation/ops console for managing playbooks and infrastructure.
+# category: automation
+# tags: automation, ansible, console, ops
+# website: https://github.com/autobase/console
+# docs: https://github.com/autobase/console#readme
+# repo: https://github.com/autobase/console
 ---
 services:
   autobase-console:

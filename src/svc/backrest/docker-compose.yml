@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Backrest
+# description: Self-hosted backup management service providing backup scheduling and state storage.
+# category: backup
+# tags: backup, snapshots, backup-management, storage
+# website: https://github.com/garethgeorge/backrest
+# docs: https://github.com/garethgeorge/backrest#readme
+# repo: https://github.com/garethgeorge/backrest
 ---
 services:
   backrest:

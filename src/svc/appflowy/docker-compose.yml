@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: AppFlowy (cloud stack)
+# description: AppFlowy cloud stack: backend services for the open-source Notion-like AppFlowy app.
+# category: productivity
+# tags: notes, collaboration, backend, postgres, redis
+# website: https://appflowy.io
+# docs: https://github.com/appflowy/appflowy#readme
+# repo: https://github.com/appflowy
 ---
 services:
   nginx:

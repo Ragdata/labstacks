@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Appsmith
+# description: Low-code platform for building internal tools and dashboards with a visual UI builder.
+# category: low-code
+# tags: low-code, internal-tools, ui, dashboards
+# website: https://www.appsmith.com
+# docs: https://docs.appsmith.com
+# repo: https://github.com/appsmithorg/appsmith
 ---
 services:
   appsmith:

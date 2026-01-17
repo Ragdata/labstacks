@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: ClassicPress
+# description: ClassicPress CMS — a fork of WordPress focused on simplicity and content-first publishing.
+# category: cms
+# tags: cms, php, classicpress, mariadb, wordpress-fork
+# website: https://www.classicpress.net
+# docs: https://www.classicpress.net/docs
+# repo: https://github.com/ClassicPress/ClassicPress
 ---
 services:
   classicpress:

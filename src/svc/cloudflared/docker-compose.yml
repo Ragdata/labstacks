@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: cloudflared
+# description: Cloudflare Tunnel client to expose local services securely through Cloudflare's network.
+# category: networking
+# tags: cloudflare, tunnel, proxy, ingress, zero-trust
+# website: https://developers.cloudflare.com/cloudflare-one/
+# docs: https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/
+# repo: https://github.com/cloudflare/cloudflared
 ---
 services:
   cloudflared:

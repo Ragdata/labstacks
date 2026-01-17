@@ -1,17 +1,15 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: code-server (LinuxServer)
+# description: VS Code running in the browser (code-server) packaged by LinuxServer for remote coding.
+# category: devtools
+# tags: code-server, vscode, ide, remote, linuxserver
+# website: https://coder.com
+# docs: https://coder.com/docs/code-server/latest
+# repo: https://github.com/coder/code-server
 ---
 # documentation: https://coder.com/docs/code-server/latest
 # slogan: Code-Server is a web-based code editor that enables remote coding and collaboration from any device, anywhere.
 # category: devtools
 # tags: code, editor, remote, collaboration
-# logo: svgs/code-server.svg
 # port: 8443
 
 services:

@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Baserow
+# description: Open-source no-code database and Airtable alternative for building collaborative database-backed apps.
+# category: database
+# tags: no-code, airtable, database, postgres, collaboration
+# website: https://baserow.io
+# docs: https://baserow.io/docs
+# repo: https://github.com/baserow/baserow
 ---
 services:
   baserow:

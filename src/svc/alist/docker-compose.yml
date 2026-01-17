@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: AList
+# description: File listing and cloud storage browser with optional aria2 integration for self-hosted file management.
+# category: storage
+# tags: file-server, cloud-storage, listing, aria2, files
+# website: https://github.com/alist-org/alist
+# docs: https://github.com/alist-org/alist#readme
+# repo: https://github.com/alist-org/alist
 ---
 services:
   alist:

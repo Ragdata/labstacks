@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Booklore
+# description: Self-hosted ebook/catalog and reading tracker application for personal libraries.
+# category: books
+# tags: books, ebook, catalog, mariadb, java
+# website: https://github.com/booklore-app/booklore
+# docs: https://github.com/booklore-app/booklore#readme
+# repo: https://github.com/booklore-app/booklore
 ---
 services:
   booklore:

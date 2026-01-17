@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Botpress
+# description: Open-source conversational AI and chatbot platform for building and deploying chatbots.
+# category: chatbots
+# tags: chatbot, nlu, messaging, nodejs, postgres
+# website: https://botpress.com
+# docs: https://botpress.com/docs
+# repo: https://github.com/botpress/botpress
 ---
 services:
   botpress:

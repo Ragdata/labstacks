@@ -1,11 +1,10 @@
 # name: Azimutt
-# logo: azimutt.png
 # description: Next-Gen ERD: Design, Explore, Document and Analyze your database.
 # category: productivity
 # tags: erd, entity-relationship diagram, database tool, database schema, diagram
-# website:
+# website: https://azimutt.app
 # docs: https://docs.azimutt.app/
-# repo:
+# repo: https://github.com/azimuttapp/azimutt
 ---
 services:
   postgres:

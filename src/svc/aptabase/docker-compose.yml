@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Aptabase
+# description: Event and analytics backend for applications using Postgres and ClickHouse.
+# category: analytics
+# tags: analytics, events, postgres, clickhouse, self-hosted
+# website: https://aptabase.com
+# docs: https://github.com/aptabase/aptabase#readme
+# repo: https://github.com/aptabase/aptabase
 ---
 services:
   aptabase_db:

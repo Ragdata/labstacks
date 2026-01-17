@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Blinko
+# description: Next.js-based web application with PostgreSQL backend (website image and backend service).
+# category: webapp
+# tags: nextjs, node, postgres, website
+# website: https://github.com/blinkospace/blinko
+# docs: https://github.com/blinkospace/blinko#readme
+# repo: https://github.com/blinkospace/blinko
 ---
 services:
   blinko-website:

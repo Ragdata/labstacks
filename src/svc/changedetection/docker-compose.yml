@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: changedetection.io
+# description: Website change monitoring tool to watch pages for changes and notify you when they occur.
+# category: monitoring
+# tags: monitoring, website, change-detection, alerts
+# website: https://changedetection.io
+# docs: https://github.com/dgtlmoon/changedetection.io#readme
+# repo: https://github.com/dgtlmoon/changedetection.io
 ---
 services:
   changedetection:

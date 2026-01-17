@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Bytestash
+# description: Self-hosted snippet/paste and file snippet manager with token-based auth and optional OIDC.
+# category: file-sharing
+# tags: snippets, pastebin, files, self-hosted, jwt
+# website: https://github.com/jordan-dalby/bytestash
+# docs: https://github.com/jordan-dalby/bytestash#readme
+# repo: https://github.com/jordan-dalby/bytestash
 ---
 services:
 

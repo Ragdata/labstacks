@@ -1,11 +1,11 @@
-# name:
+# name: Chief Onboarding
 # logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# description: Employee onboarding application (self-hosted) for managing new hire workflows and training.
+# category: hr
+# tags: onboarding, hr, postgres, webapp
+# website: https://github.com/chiefonboarding
+# docs: https://github.com/chiefonboarding/chiefonboarding#readme
+# repo: https://github.com/chiefonboarding/chiefonboarding
 ---
 services:
   chiefonboarding:

@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Bytebase
+# description: Database schema change and lifecycle management tool for teams (self-hosted).
+# category: database
+# tags: database, schema, migrations, postgres
+# website: https://www.bytebase.com
+# docs: https://docs.bytebase.com
+# repo: https://github.com/bytebase/bytebase
 ---
 services:
   bytebase:

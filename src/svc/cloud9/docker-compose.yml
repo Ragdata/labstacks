@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Cloud9 (linuxserver)
+# description: Web-based IDE (Cloud9) packaged by LinuxServer for remote development in the browser.
+# category: devtools
+# tags: ide, cloud9, development, remote, linuxserver
+# website: https://linuxserver.io
+# docs: https://github.com/linuxserver/docker-cloud9
+# repo: https://github.com/linuxserver/docker-cloud9
 ---
 services:
   cloud9:

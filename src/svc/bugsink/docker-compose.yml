@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Bugsink
+# description: Self-hosted error tracking and bug reporting application (Django + Postgres).
+# category: monitoring
+# tags: errors, bug-tracking, django, postgres
+# website: https://github.com/bugsink/bugsink
+# docs: https://github.com/bugsink/bugsink#readme
+# repo: https://github.com/bugsink/bugsink
 ---
 services:
   db:

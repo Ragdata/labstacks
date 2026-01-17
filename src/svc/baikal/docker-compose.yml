@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Baïkal
+# description: Lightweight CalDAV/CardDAV server for hosting calendars and contacts.
+# category: calendar
+# tags: caldav, carddav, contacts, calendar, php
+# website: https://sabre.io/baikal/
+# docs: https://sabre.io/baikal/#documentation
+# repo: https://github.com/sabre-io/Baikal
 ---
 services:
   baikal:

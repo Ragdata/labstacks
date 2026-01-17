@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Chatwoot
+# description: Open-source customer engagement platform for conversations, support and sales (self-hosted, Rails).
+# category: chat / crm
+# tags: chatwoot, chat, customer-support, crm, rails, postgres, redis
+# website: https://www.chatwoot.com
+# docs: https://www.chatwoot.com/docs
+# repo: https://github.com/chatwoot/chatwoot
 ---
 x-base-config: &base-config
   image: chatwoot/chatwoot:v4.0.3

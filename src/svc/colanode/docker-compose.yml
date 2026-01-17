@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Colanode
+# description: Team chat and collaboration server providing messaging, file storage and user management (Postgres + MinIO + Valkey).
+# category: chat
+# tags: chat, messaging, postgres, minio, valkey, node
+# website: https://colanode.dev
+# docs: https://github.com/colanode/server#readme
+# repo: https://github.com/colanode/server
 ---
 services:
   postgres:

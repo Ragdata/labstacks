@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Cap (web)
+# description: Web frontend and storage stack for Cap — self-hosted screen recording and sharing platform.
+# category: media
+# tags: screen-recording, web, storage, recordings, minio
+# website: https://cap.so
+# docs: https://cap.so/docs
+# repo: https://github.com/cap-so/cap-web
 ---
 services:
   cap-web:

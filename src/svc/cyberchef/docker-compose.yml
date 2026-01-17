@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: CyberChef
+# description: CyberChef — browser-based data transformation and analysis toolkit from GCHQ.
+# category: security
+# tags: cyberchef, analysis, tooling, web
+# website: https://gchq.github.io/CyberChef
+# docs: https://github.com/gchq/CyberChef#readme
+# repo: https://github.com/gchq/CyberChef
 ---
 services:
   cyberchef:

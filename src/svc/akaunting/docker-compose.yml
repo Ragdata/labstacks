@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Akaunting
+# description: Open-source accounting and invoicing software for small businesses; self-hosted.
+# category: finance
+# tags: accounting, invoicing, finance, bookkeeping, php, mariadb
+# website: https://akaunting.com
+# docs: https://akaunting.com/docs
+# repo: https://github.com/akaunting/akaunting
 ---
 services:
   akaunting:

@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Commento++
+# description: Enhanced fork of Commento providing additional features for moderation and wildcard domains.
+# category: comments
+# tags: comments, moderation, postgres, fork
+# website: https://github.com/caroga/commentoplusplus
+# docs: https://github.com/caroga/commentoplusplus#readme
+# repo: https://github.com/caroga/commentoplusplus
 ---
 services:
   commentoplusplus:

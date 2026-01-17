@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Authelia
+# description: Authentication and authorization server providing 2FA, SSO and access control for reverse proxies.
+# category: security
+# tags: auth, 2fa, sso, reverse-proxy, security
+# website: https://www.authelia.com
+# docs: https://www.authelia.com/docs
+# repo: https://github.com/authelia/authelia
 ---
 services:
   authelia:

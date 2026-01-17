@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: cup
+# description: Lightweight container utility exposing a web UI and access to the Docker socket.
+# category: utilities
+# tags: docker, container, management, web-ui
+# website: https://github.com/sergi0g/cup
+# docs: https://github.com/sergi0g/cup#readme
+# repo: https://github.com/sergi0g/cup
 ---
 services:
   cup:

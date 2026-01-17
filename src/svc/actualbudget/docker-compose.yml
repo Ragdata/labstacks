@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Actual Budget (server)
+# description: Self-hosted backend for Actual Budget — personal budgeting and finance management.
+# category: finance
+# tags: budgeting, finance, personal-finance, self-hosted
+# website: https://actualbudget.org
+# docs: https://actualbudget.org/docs
+# repo: https://github.com/actualbudget/actual-server
 ---
 services:
   actualbudget:

@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: ConvertX
+# description: Web-based file and media conversion service with JWT auth and configurable ffmpeg options.
+# category: media
+# tags: conversion, ffmpeg, media, file-server, jwt
+# website: https://github.com/c4illin/convertx
+# docs: https://github.com/c4illin/convertx#readme
+# repo: https://github.com/c4illin/convertx
 ---
 services:
   convertx:

@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Calibre-Web
+# description: Web app to browse, read and manage Calibre ebook libraries with a clean web UI.
+# category: books
+# tags: ebooks, library, web-ui, calibre
+# website: https://calibre-web.readthedocs.io
+# docs: https://github.com/janeczku/calibre-web#readme
+# repo: https://github.com/janeczku/calibre-web
 ---
 services:
   calibre-web:

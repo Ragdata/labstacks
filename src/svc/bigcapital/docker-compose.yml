@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: BigCapital
+# description: Multi-service SaaS platform stack for fintech-style applications with webapp, API server, databases and workers.
+# category: finance
+# tags: saas, finance, webapp, mysql, mongo, redis, gotenberg
+# website: https://bigcapitalhq.com
+# docs: https://github.com/bigcapitalhq
+# repo: https://github.com/bigcapitalhq
 ---
 services:
   webapp:
@@ -156,6 +155,4 @@ volumes:
   redis:
     name: bigcapital_redis
     driver: local
-
-
 

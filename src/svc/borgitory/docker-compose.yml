@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Borgitory
+# description: Web UI for browsing and serving Borg backup repositories (requires FUSE).
+# category: backup
+# tags: borg, backups, fuse, storage
+# website: https://github.com/mlapaglia/borgitory
+# docs: https://github.com/mlapaglia/borgitory#readme
+# repo: https://github.com/mlapaglia/borgitory
 ---
 services:
   borgitory:

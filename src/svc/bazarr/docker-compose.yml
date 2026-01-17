@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Bazarr
+# description: Subtitle management and downloading companion for Sonarr/Radarr to automatically fetch and manage subtitles.
+# category: media
+# tags: subtitles, media, downloader, sonarr, radarr
+# website: https://www.bazarr.media
+# docs: https://github.com/morpheus65535/bazarr#readme
+# repo: https://github.com/morpheus65535/bazarr
 ---
 services:
   bazarr:

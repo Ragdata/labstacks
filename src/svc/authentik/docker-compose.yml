@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Authentik
+# description: Identity provider and access management platform for single sign-on and MFA.
+# category: identity
+# tags: identity, sso, mfa, oauth, oidc
+# website: https://goauthentik.io
+# docs: https://goauthentik.io/docs
+# repo: https://github.com/goauthentik/authentik
 ---
 services:
   postgresql:

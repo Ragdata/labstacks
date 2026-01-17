@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Cloudflare DDNS
+# description: Containerized dynamic DNS updater that synchronizes Cloudflare DNS records with your host IP.
+# category: networking
+# tags: dns, cloudflare, ddns, dynamic-dns, network
+# website: https://github.com/favonia/cloudflare-ddns
+# docs: https://github.com/favonia/cloudflare-ddns#readme
+# repo: https://github.com/favonia/cloudflare-ddns
 ---
 services:
 

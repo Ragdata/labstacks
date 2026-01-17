@@ -1,17 +1,15 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Chaskiq
+# description: Messaging platform for marketing, support and sales — Rails-based self-hosted customer messaging and automation.
+# category: cms
+# tags: chaskiq, messaging, chat, marketing, support, sales, rails, redis, postgresql, sidekiq
+# website: https://chaskiq.io
+# docs: https://chaskiq.io/docs
+# repo: https://github.com/chaskiq/chaskiq
 ---
 # documentation: https://chaskiq.io
 # slogan: Chaskiq is an messaging platform for marketing, support & sales
 # category: cms
 # tags: chaskiq,messaging,chat,marketing,support,sales,open,source,rails,redis,postgresql,sidekiq
-# logo: svgs/chaskiq.png
 # port: 3000
 
 services:

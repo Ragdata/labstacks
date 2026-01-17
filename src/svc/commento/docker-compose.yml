@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Commento
+# description: Privacy-focused, lightweight commenting platform for websites and blogs (self-hosted).
+# category: comments
+# tags: comments, moderation, privacy, postgres, go
+# website: https://commento.io
+# docs: https://gitlab.com/commento/commento#readme
+# repo: https://gitlab.com/commento/commento
 ---
 services:
   commento:

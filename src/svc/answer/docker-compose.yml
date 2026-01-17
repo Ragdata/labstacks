@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Apache Answer
+# description: Open-source Q&A / knowledge base platform from the Apache project.
+# category: knowledge-base
+# tags: qa, knowledge-base, search, apache
+# website: https://answer.apache.org
+# docs: https://github.com/apache/answer#readme
+# repo: https://github.com/apache/answer
 ---
 services:
   answer:
