@@ -1,3 +1,12 @@
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   backend:
     image: ghcr.io/get-convex/convex-backend:33cef775a8a6228cbacee4a09ac2c4073d62ed13

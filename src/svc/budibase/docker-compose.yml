@@ -1,3 +1,12 @@
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   apps:
     image: budibase.docker.scarf.sh/budibase/apps:3.5.3
@@ -169,8 +178,8 @@ services:
       retries: 5
       start_period: 10s
   watchtower:
-    restart: unless-stopped   
- 
+    restart: unless-stopped
+
     image: containrrr/watchtower:1.7.1
     volumes:
       - '/var/run/docker.sock:/var/run/docker.sock'
@@ -189,4 +198,4 @@ networks:
 volumes:
   minio_data:
   couchdb3_data:
-  redis_data: 
+  redis_data:

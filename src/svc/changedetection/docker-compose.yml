@@ -1,5 +1,12 @@
-version: '3.8'
-
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   changedetection:
     image: ghcr.io/dgtlmoon/changedetection.io:0.49
@@ -10,4 +17,4 @@ services:
       - datastore:/datastore
 
 volumes:
-  datastore: 
+  datastore:

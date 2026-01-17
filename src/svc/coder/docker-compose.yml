@@ -1,3 +1,12 @@
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   coder:
     image: ghcr.io/coder/coder:v2.15.3

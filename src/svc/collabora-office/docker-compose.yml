@@ -1,5 +1,12 @@
-version: "3"
-
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   collabora:
     image: collabora/code:latest
@@ -9,4 +16,4 @@ services:
       - domain=${DOMAIN}
       - username=${USERNAME}
       - password=${PASSWORD}
-      - extra_params=--o:ssl.enable=false 
+      - extra_params=--o:ssl.enable=false

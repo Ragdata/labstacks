@@ -1,5 +1,12 @@
-version: "3"
-
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   commento:
     image: registry.gitlab.com/commento/commento:v1.8.0
@@ -19,4 +26,4 @@ services:
       - postgres-data:/var/lib/postgresql/data
 
 volumes:
-  postgres-data: 
+  postgres-data:

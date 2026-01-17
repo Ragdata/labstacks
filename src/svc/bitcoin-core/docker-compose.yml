@@ -1,9 +1,12 @@
-# documentation: https://hub.docker.com/r/ruimarinho/bitcoin-core/
-# slogan: A self-hosted Bitcoin Core full node.
+# name: Bitcoin Core
+# logo: bitcoin.png
+# description: A self-hosted Bitcoin Core full node.
 # category: backend
 # tags: cryptocurrency, node, blockchain, bitcoin
-# logo: svgs/bitcoin.svg
-
+# website:
+# docs: https://hub.docker.com/r/ruimarinho/bitcoin-core/
+# repo:
+---
 services:
   bitcoin-core:
     image: ruimarinho/bitcoin-core:latest

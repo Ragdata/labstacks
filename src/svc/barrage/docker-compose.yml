@@ -1,4 +1,12 @@
-version: "3.8"
+# name:
+# logo:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
   barrage:
     image: maulik9898/barrage:0.3.0
@@ -10,4 +18,4 @@ services:
       - NEXTAUTH_URL=http://${DOMAIN}
       - DELUGE_URL=${DELUGE_URL}
       - DELUGE_PASSWORD=${DELUGE_PASSWORD}
-      - BARRAGE_PASSWORD=${BARRAGE_PASSWORD} 
+      - BARRAGE_PASSWORD=${BARRAGE_PASSWORD}
