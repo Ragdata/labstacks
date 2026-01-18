@@ -1,10 +1,18 @@
-version: "3.8"
-
 services:
   postiz-app:
     image: ghcr.io/gitroomhq/postiz-app:latest
-    restart: always
-
+    container_name: postiz-app
+    restart: unless-stopped
+    depends_on:
+      postiz-postgres:
+        condition: service_healthy
+      postiz-redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=3 --spider http://postiz:5000 || exit 1"]
+      interval: 1m
+      timeout: 10s
+      retries: 3
     environment:
       MAIN_URL: "https://${POSTIZ_HOST}"
       FRONTEND_URL: "https://${POSTIZ_HOST}"
@@ -14,52 +22,88 @@ services:
       REDIS_URL: "redis://postiz-redis:6379"
       BACKEND_INTERNAL_URL: "http://localhost:3000"
       IS_GENERAL: "true"
+      DISABLE_REGISTRATION: ${DISABLE_REGISTRATION:-false}
       STORAGE_PROVIDER: "local"
       UPLOAD_DIRECTORY: "/uploads"
       NEXT_PUBLIC_UPLOAD_DIRECTORY: "/uploads"
+      # CLOUDFLARE_ACCOUNT_ID: ${CLOUDFLARE_ACCOUNT_ID}
+      # CLOUDFLARE_ACCESS_KEY: ${CLOUDFLARE_ACCESS_KEY}
+      # CLOUDFLARE_SECRET_ACCESS_KEY: ${CLOUDFLARE_SECRET_ACCESS_KEY}
+      # CLOUDFLARE_BUCKETNAME: ${CLOUDFLARE_BUCKETNAME}
+      # CLOUDFLARE_REGION: ${CLOUDFLARE_REGION}
+    networks:
+      postiz:
+        ipv4_address: ${IPv4}
+      postiz-internal:
+    ports:
+      - "${HOST_PORT:-5000}:5000"
     volumes:
-      - postiz-config:/config/
-      - postiz-uploads:/uploads/
-    depends_on:
-      postiz-postgres:
-        condition: service_healthy
-      postiz-redis:
-        condition: service_healthy
+      - ${BASEDIR}/config:/config/
+      - ${BASEDIR}/uploads:/uploads/
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
 
   postiz-postgres:
-    image: postgres:17-alpine
-    restart: always
-
-    environment:
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_DB: ${DB_NAME}
-    volumes:
-      - postiz-postgres-data:/var/lib/postgresql/data
+    image: postgres:latest
+    container_name: postiz-postgres
+    restart: unless-stopped
     healthcheck:
       test: pg_isready -U ${DB_USER} -d ${DB_NAME}
       interval: 10s
       timeout: 3s
       retries: 3
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
+    networks:
+      - postiz-internal
+    ports:
+      - "${HOST_PORT_PG:-5432}:5432"
+    volumes:
+      - postiz-postgres:/var/lib/postgresql/data
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
 
   postiz-redis:
-    image: redis:7.2
-    restart: always
-
+    image: redis:latest
+    container_name: postiz-redis
+    restart: unless-stopped
     healthcheck:
       test: redis-cli ping
       interval: 10s
       timeout: 3s
       retries: 3
+    networks:
+      - postiz-internal
+    ports:
+      - "${HOST_PORT_REDIS:-6379}:6379"
     volumes:
-      - postiz-redis-data:/data
+      - postiz-redis:/data
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
 
 networks:
-  dokploy-network:
-    external: true
+  postiz:
+    name: postiz
+    driver: bridge
+    ipam:
+      config:
+        - subnet: ${SUBNET}
+          gateway: ${GATEWAY}
+  postiz-internal:
+    name: postiz-internal
+    driver: bridge
+    internal: true
+    ipam:
+      config:
+        - subnet: ${SUBNET_INTERNAL}
+          gateway: ${GATEWAY_INTERNAL}
 
 volumes:
-  postiz-postgres-data:
-  postiz-redis-data:
-  postiz-config:
-  postiz-uploads: 
+  postiz-postgres:
+    name: postiz-postgres
+    driver: local
+  postiz-redis:
+    name: postiz-redis
+    driver: local
