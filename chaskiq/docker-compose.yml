@@ -6,13 +6,8 @@
 # docs: https://chaskiq.io/docs
 # repo: https://github.com/chaskiq/chaskiq
 ---
-# documentation: https://chaskiq.io
-# slogan: Chaskiq is an messaging platform for marketing, support & sales
-# category: cms
-# tags: chaskiq,messaging,chat,marketing,support,sales,open,source,rails,redis,postgresql,sidekiq
-# port: 3000
-
 services:
+
   chaskiq:
     image: chaskiq/chaskiq:latest
     container_name: chaskiq
