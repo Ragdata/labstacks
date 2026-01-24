@@ -1,9 +1,11 @@
-# documentation: https://www.drupal.org/about
-# slogan: Drupal is a free and open-source web content management system written in PHP and distributed under the GNU General Public License.
+# name: Drupal
+# description: Drupal — open-source web content management system for building websites and web applications.
 # category: cms
-# tags: cms, blog, content, management, postgresql
-# logo: svgs/drupal.svg
-
+# tags: cms,content,php,drupal,postgres
+# website: https://www.drupal.org
+# docs: https://www.drupal.org/documentation
+# repo: https://github.com/drupal/drupal
+---
 services:
   drupal:
     image: "drupal:10-apache"

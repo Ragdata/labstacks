@@ -1,5 +1,11 @@
-version: "3.8"
-
+# name: Discord Tickets
+# description: Self-hosted Discord ticketing bot to manage support tickets via Discord.
+# category: bot
+# tags: discord,bot,tickets,support,mysql
+# website: https://github.com/eartharoid/discord-tickets
+# docs: https://github.com/eartharoid/discord-tickets#readme
+# repo: https://github.com/eartharoid/discord-tickets
+---
 services:
   tickets-postgres:
     image: mysql:8
@@ -51,4 +57,4 @@ networks:
 
 volumes:
   tickets-mysql-data:
-  tickets-app-data: 
+  tickets-app-data:

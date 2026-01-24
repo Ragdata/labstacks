@@ -1,3 +1,11 @@
+# name: Directus
+# description: Headless CMS and API for managing database content with an intuitive admin app.
+# category: cms
+# tags: cms,headless,database,api,directus
+# website: https://directus.io
+# docs: https://docs.directus.io
+# repo: https://github.com/directus/directus
+---
 services:
   database:
     image: postgis/postgis:13-master

@@ -1,3 +1,10 @@
+# name: DomainMOD
+# description: Web-based domain management system for keeping track of domain registrations, contacts and DNS.
+# category: domain-management
+# tags: domain,management,mysql,php,web
+# website: https://domainmod.org
+# docs: https://github.com/domainmod/domainmod#readme
+# repo: https://github.com/domainmod/domainmod
 ---
 services:
     domainmod:

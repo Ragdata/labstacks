@@ -1,11 +1,10 @@
-# name:
-# logo:
-# description:
-# category:
-# tags:
-# website:
-# docs:
-# repo:
+# name: Datalens
+# description: Open-source business intelligence platform for building dashboards and analytics.
+# category: analytics
+# tags: analytics,bi,datalens,postgres,ui
+# website: https://datalens.ai
+# docs: https://github.com/datalens-tech/datalens#readme
+# repo: https://github.com/datalens-tech/datalens
 ---
 services:
   pg-compeng:

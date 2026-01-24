@@ -1,3 +1,11 @@
+# name: Dockwatch
+# description: Monitor Docker containers and send notifications (Notifiarr Dockwatch).
+# category: monitoring
+# tags: docker,monitoring,notifications,notifiarr
+# website: https://notifiarr.com
+# docs: https://github.com/notifiarr/dockwatch#readme
+# repo: https://github.com/notifiarr/dockwatch
+---
 services:
 
     dockwatch:

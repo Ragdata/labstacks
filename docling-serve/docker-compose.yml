@@ -1,3 +1,11 @@
+# name: Docling Serve
+# description: Docling Serve — linguistic analysis and language resource server for the Docling project.
+# category: nlp
+# tags: nlp,linguistics,api,docling
+# website: https://docling.github.io
+# docs: https://github.com/docling-project/docling-serve#readme
+# repo: https://github.com/docling-project/docling-serve
+---
 services:
   docling-serve:
     image: quay.io/docling-project/docling-serve:latest

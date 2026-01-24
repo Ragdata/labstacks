@@ -1,3 +1,11 @@
+# name: Dockhand
+# description: Web-based Docker management UI for viewing and controlling containers, images and volumes.
+# category: container-management
+# tags: docker,ui,containers,management,postgres
+# website: https://github.com/fnsys/dockhand
+# docs: https://github.com/fnsys/dockhand#readme
+# repo: https://github.com/fnsys/dockhand
+---
 services:
 
   postgres:

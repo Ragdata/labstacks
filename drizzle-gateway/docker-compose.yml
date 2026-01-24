@@ -1,3 +1,11 @@
+# name: Drizzle Gateway
+# description: Gateway service for Drizzle-related tooling — provides API and storage gateway functionality.
+# category: database
+# tags: gateway,drizzle,storage,api
+# website: https://github.com/drizzle-team/gateway
+# docs: https://github.com/drizzle-team/gateway#readme
+# repo: https://github.com/drizzle-team/gateway
+---
 services:
   drizzle-gateway:
     image: ghcr.io/drizzle-team/gateway:latest

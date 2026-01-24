@@ -1,5 +1,11 @@
-version: '3.7'
-
+# name: Discourse
+# description: Open-source forum and community platform.
+# category: forum
+# tags: forum,community,discourse,rails,postgres
+# website: https://www.discourse.org
+# docs: https://meta.discourse.org
+# repo: https://github.com/discourse/discourse
+---
 services:
   discourse-db:
     image: docker.io/bitnami/postgresql:17
@@ -87,4 +93,4 @@ volumes:
   discourse-postgresql-data:
   discourse-redis-data:
   discourse-data:
-  discourse-sidekiq-data: 
+  discourse-sidekiq-data:
