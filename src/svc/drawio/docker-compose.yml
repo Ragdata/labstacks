@@ -1,4 +1,11 @@
-version: '3'
+# name: draw.io (self-hosted)
+# description: Self-hosted draw.io (diagrams.net) with PlantUML and image export services for diagram rendering.
+# category: diagrams
+# tags: diagrams,uml,plantuml,drawio,export
+# website: https://www.diagrams.net
+# docs: https://github.com/jgraph/drawio#readme
+# repo: https://github.com/jgraph/drawio
+---
 services:
   plantuml-server:
     image: plantuml/plantuml-server

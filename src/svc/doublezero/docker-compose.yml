@@ -1,3 +1,11 @@
+# name: Double Zero
+# description: Background job processing service with optional AWS SQS integration and local DB storage.
+# category: worker
+# tags: jobs,worker,background,aws,sqs,elixir
+# website: https://hub.docker.com/r/liltechnomancer/double-zero
+# docs: https://hub.docker.com/r/liltechnomancer/double-zero
+# repo: https://github.com/liltechnomancer/double-zero
+---
 services:
   doublezero:
     restart: always

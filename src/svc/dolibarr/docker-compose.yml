@@ -1,10 +1,11 @@
-# documentation: https://www.dolibarr.org/documentation-home.php
-# slogan: Dolibarr is a modern software package to manage your organization's activity (contacts, quotes, invoices, orders, stocks, agenda, hr, expense reports, accountancy, ecm, manufacturing, ...).
+# name: Dolibarr
+# description: Dolibarr — ERP and CRM suite for small and medium organizations (invoices, contacts, accounting, ERP).
 # category: cms
-# tags: crm,ERP
-# logo: svgs/dolibarr.png
-# port: 80
-
+# tags: crm,erp,accounting,invoicing,finance
+# website: https://www.dolibarr.org
+# docs: https://www.dolibarr.org/documentation-home.php
+# repo: https://github.com/Dolibarr/dolibarr
+---
 services:
   dolibarr:
     image: dolibarr/dolibarr:latest

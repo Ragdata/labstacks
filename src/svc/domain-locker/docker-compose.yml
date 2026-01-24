@@ -1,5 +1,11 @@
-version: "3.8"
-
+# name: Domain Locker
+# description: Self-hosted domain monitoring and management service for tracking domains, expirations and DNS records.
+# category: domain-management
+# tags: domain,dns,monitoring,whois,expiry
+# website: https://github.com/Lissy93/domain-locker
+# docs: https://github.com/Lissy93/domain-locker#readme
+# repo: https://github.com/Lissy93/domain-locker
+---
 services:
   postgres:
     image: postgres:15-alpine

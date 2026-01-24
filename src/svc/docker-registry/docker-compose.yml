@@ -1,10 +1,11 @@
-# documentation: https://docs.docker.com/registry/
-# slogan: The Docker Registry lets you distribute Docker images.
+# name: Docker Registry
+# description: Private Docker registry for hosting and distributing container images.
 # category: devtools
-# tags: registry,images,docker
-# logo: svgs/docker-registry.png
-# port: 5000
-
+# tags: registry,images,docker,registry:2
+# website: https://docs.docker.com/registry/
+# docs: https://docs.docker.com/registry/
+# repo: https://github.com/distribution/distribution
+---
 services:
   registry:
     image: registry:2

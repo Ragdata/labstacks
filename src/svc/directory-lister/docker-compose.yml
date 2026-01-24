@@ -1,3 +1,11 @@
+# name: Directory Lister
+# description: Simple web app to list directory contents and serve static files.
+# category: utility
+# tags: directory,lister,files,static,web
+# website: https://directorylister.com
+# docs: https://github.com/DirectoryLister/DirectoryLister#readme
+# repo: https://github.com/DirectoryLister/DirectoryLister
+---
 services:
   directory-lister:
     image: directorylister/directorylister:latest

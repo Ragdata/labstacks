@@ -1,5 +1,11 @@
-version: "3"
-
+# name: Docmost
+# description: Docmost — documentation hosting platform that uses Postgres and Redis for storage and caching.
+# category: documentation
+# tags: docs,documentation,postgres,redis,web
+# website: https://docmost.org
+# docs: https://github.com/docmost/docmost#readme
+# repo: https://github.com/docmost/docmost
+---
 services:
   docmost:
     image: docmost/docmost:0.4.1

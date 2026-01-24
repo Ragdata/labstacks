@@ -1,4 +1,11 @@
-version: '3.8'
+# name: DragonflyDB
+# description: High-performance in-memory database (Redis-compatible alternative) - DragonflyDB container.
+# category: database
+# tags: database,redis-compatible,in-memory,cache
+# website: https://dragonflydb.io
+# docs: https://github.com/dragonflydb/dragonfly#readme
+# repo: https://github.com/dragonflydb/dragonfly
+---
 services:
   dragonflydb:
     image: 'docker.dragonflydb.io/dragonflydb/dragonfly'
@@ -8,7 +15,7 @@ services:
       - "6379:6379"
     volumes:
       - dragonflydata:/data
-    environment: 
+    environment:
       - DFLY_requirepass
 volumes:
   dragonflydata:

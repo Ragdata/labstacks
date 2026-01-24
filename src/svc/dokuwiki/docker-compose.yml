@@ -1,9 +1,11 @@
-# documentation: https://www.dokuwiki.org/
-# slogan: A lightweight and easy-to-use wiki platform for creating and managing documentation and knowledge bases.
+# name: DokuWiki
+# description: A lightweight and easy-to-use wiki platform for creating and managing documentation and knowledge bases.
 # category: cms
-# tags: wiki, documentation, knowledge, base
-# logo: svgs/dokuwiki.png
-
+# tags: wiki,documentation,knowledge,base,dokuwiki
+# website: https://www.dokuwiki.org
+# docs: https://www.dokuwiki.org/docs
+# repo: https://github.com/splitbrain/dokuwiki
+---
 services:
   dokuwiki:
     image: lscr.io/linuxserver/dokuwiki:latest
