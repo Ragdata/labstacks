@@ -13,7 +13,12 @@ services:
     container_name: mailserver
     # Provide the FQDN of your mail server here (Your DNS MX record should point to this value)
     hostname: ${HOSTNAME}
+    # security_opt:
+    #   - apparmor:unconfined
     env_file: mailserver.env
+    # environment:
+    #   SSL_TYPE: letsencrypt
+    #   ENABLE_FAIL
     # More information about the mail-server ports:
     # https://docker-mailserver.github.io/docker-mailserver/latest/config/security/understanding-the-ports/
     ports:
@@ -23,12 +28,14 @@ services:
       - "587:587"  # ESMTP (explicit TLS => STARTTLS)
       - "993:993"  # IMAP4 (implicit TLS)
     volumes:
-      - ./docker-data/dms/mail-data/:/var/mail/
-      - ./docker-data/dms/mail-state/:/var/mail-state/
-      - ./docker-data/dms/mail-logs/:/var/log/mail/
-      - ./docker-data/dms/config/:/tmp/docker-mailserver/
+      - ${HOSTDIR}/mail-data/:/var/mail/
+      - ${HOSTDIR}/mail-state/:/var/mail-state/
+      - ${HOSTDIR}/mail-logs/:/var/log/mail/
+      - ${HOSTDIR}/config/:/tmp/docker-mailserver/
+      # - ${HOSTDIR}/certbot/certs/:/etc/letsencrypt/
+      # - ${HOSTDIR}/certbot/logs/:/var/log/letsencrypt/
       - /etc/localtime:/etc/localtime:ro
-    restart: always
+    restart: unless-stopped
     stop_grace_period: 1m
     # Uncomment if using `ENABLE_FAIL2BAN=1`:
     # cap_add:
