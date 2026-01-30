@@ -2,8 +2,7 @@ name: pangolin
 services:
 
   pangolin:
-    # image: docker.io/fosrl/pangolin:1.11.1
-    image: docker.io/fosrl/pangolin:latest
+    image: docker.io/fosrl/pangolin:ee-latest
     container_name: pangolin
     restart: unless-stopped
     healthcheck:
@@ -37,17 +36,16 @@ services:
     networks:
       - pangolin
     ports:
-      - 51820:51820/udp
-      - 21820:21820/udp
-      - 8080:8080
-      - 443:443
-      - 80:80
+      - "51820:51820/udp"
+      - "21820:21820/udp"
+      - "8080:8080"
+      - "443:443"
+      - "80:80"
     volumes:
       - ${ROOTDIR}/config:/var/config
 
 
   traefik:
-    # image: traefik:v3.4.0
     image: traefik:latest
     container_name: traefik
     restart: unless-stopped
