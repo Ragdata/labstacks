@@ -1,4 +1,4 @@
-<a name="top" href="docker-compose.yml" target="_blank"><img height="80" align="right" src="assets/icon.png" alt="Pangolin" /></a>
+<a name="top" href="docker-compose.yml" target="_blank"><img height="80" align="right" src="icon.png" alt="Pangolin" /></a>
 
 [![Github Release][github-release]](https://github.com/fosrl/pangolin)
 ![Release Date][release-date]
