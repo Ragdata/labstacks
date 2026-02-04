@@ -13,7 +13,7 @@ experimental:
   plugins:
     badger:
       moduleName: "github.com/fosrl/badger"
-      version: "v1.2.0"
+      version: "v1.3.1"
 
 log:
   level: "INFO"
@@ -35,8 +35,10 @@ accessLog:
 certificatesResolvers:
   letsencrypt:
     acme:
-      httpChallenge:
-        entryPoint: web
+#      httpChallenge:
+#        entryPoint: web
+      dnsChallenge:
+        provider: cloudflare
       email: "ragdata@ragdata.dev"
       storage: "/letsencrypt/acme.json"
       caServer: "https://acme-v02.api.letsencrypt.org/directory"
@@ -52,6 +54,9 @@ entryPoints:
     http:
       tls:
         certResolver: "letsencrypt"
+      encodedCharacters:
+        allowEncodedSlash: true
+        allowEncodedQuestionMark: true
 
 serversTransport:
   insecureSkipVerify: true

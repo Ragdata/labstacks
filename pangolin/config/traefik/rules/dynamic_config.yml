@@ -1,5 +1,9 @@
 http:
   middlewares:
+    badger:
+      plugin:
+        badger:
+          disableForwardAuth: true
     redirect-to-https:
       redirectScheme:
         scheme: https
@@ -13,6 +17,7 @@ http:
         - web
       middlewares:
         - redirect-to-https
+        - badger
 
     # Next.js router (handles everything except API and WebSocket paths)
     next-router:
@@ -20,8 +25,13 @@ http:
       service: next-service
       entryPoints:
         - websecure
+      middlewares:
+        - badger
       tls:
         certResolver: letsencrypt
+        domains:
+          - main: aever.au
+            sans: ["*.aever.au"]
 
     # API router (handles /api/v1 paths)
     api-router:
@@ -29,6 +39,8 @@ http:
       service: api-service
       entryPoints:
         - websecure
+      middlewares:
+        - badger
       tls:
         certResolver: letsencrypt
 
@@ -38,6 +50,8 @@ http:
       service: api-service
       entryPoints:
         - websecure
+      middlewares:
+        - badger
       tls:
         certResolver: letsencrypt
 
@@ -51,3 +65,12 @@ http:
       loadBalancer:
         servers:
           - url: "http://pangolin:3000"  # API/WebSocket server
+
+tcp:
+  serversTransports:
+    pp-transport-v1:
+      proxyProtocol:
+        version: 1
+    pp-transport-v2:
+      proxyProtocol:
+        version: 2

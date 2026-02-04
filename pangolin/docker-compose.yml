@@ -14,7 +14,7 @@ services:
       - pangolin
     volumes:
       - ${ROOTDIR}/config:/app/config
-      - pangolin-data:/var/certiciates
+      - pangolin-data:/var/certificates
       - pangolin-data:/var/dynamic
 
 
@@ -39,10 +39,12 @@ services:
       - "51820:51820/udp"
       - "21820:21820/udp"
       - "8080:8080"
-      - "443:443"
+      - "443:8443"
       - "80:80"
     volumes:
       - ${ROOTDIR}/config:/var/config
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
 
 
   traefik:
@@ -55,11 +57,19 @@ services:
     command:
       - --configFile=/etc/traefik/traefik_config.yml
     network_mode: service:gerbil
+    environment:
+      TZ: Australia/Brisbane
+      CLOUDFLARE_DNS_API_TOKEN: ${CLOUDFLARE_TOKEN}
     volumes:
       - ${ROOTDIR}/config/traefik:/etc/traefik:ro
       - ${ROOTDIR}/config/traefik/rules:/rules:ro
       - ${ROOTDIR}/config/traefik/logs:/logs
       - ${ROOTDIR}/config/traefik/letsencrypt:/letsencrypt
+      # Shared volume for certificates & dynamic config
+      - pangolin-data:/var/certificates:ro
+      - pangolin-data:/var/dynamic:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
 
 
 
