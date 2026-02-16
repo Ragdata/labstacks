@@ -18,7 +18,7 @@ services:
     env_file: mailserver.env
     # environment:
     #   SSL_TYPE: letsencrypt
-    #   ENABLE_FAIL
+    #   ENABLE_FAIL2BAN: 1
     # More information about the mail-server ports:
     # https://docker-mailserver.github.io/docker-mailserver/latest/config/security/understanding-the-ports/
     ports:

@@ -1,3 +1,11 @@
+# name:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 x-custom-image: &custom_image
   image: ${IMAGE_NAME:-docker.io/frappe/erpnext}:${VERSION:-version-15}
   pull_policy: ${PULL_POLICY:-always}
@@ -6,6 +14,7 @@ x-custom-image: &custom_image
       condition: always
 
 services:
+
   backend:
     <<: *custom_image
     volumes:
@@ -44,7 +53,7 @@ services:
 
     networks:
       - bench-network
-    
+
     healthcheck:
       test:
         - CMD
