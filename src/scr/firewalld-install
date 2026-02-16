@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+####################################################################
+# Author:       Ragdata
+# Date:         16/02/2026
+# License:      MIT License
+# Copyright:    Copyright © 2026 Redeyed Technologies
+####################################################################
+# INSTALL FIREWALLD
+####################################################################
+apt install firewalld -y
+
+systemctl enable firewalld
+systemctl start firewalld
+
+firewall-cmd --permanent --add-service=ssh
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --permanent --add-service=dns
+
+firewall-cmd --permanent --add-port=2376/tcp
+firewall-cmd --permanent --add-port=10000/tcp
+firewall-cmd --permanent --add-port=21820/udp
+firewall-cmd --permanent --add-port=51820/udp
+
+firewall-cmd --reload
