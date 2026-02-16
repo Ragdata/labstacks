@@ -5,8 +5,8 @@ version: 0.1.0
 copyright: Copyright © 2025 Redeyed Technologies
 website: https://ragdata.github.io/labstacks
 repo_url: https://github.com/ragdata/labstacks
-license: GNU Affero General Public License v3.0
-license_url: https://www.gnu.org/licenses/agpl-3.0.html
+license: MIT License
+license_url: https://choosealicense.com/licenses/mit/
 license_file: LICENSE
 keywords:
     - docker
