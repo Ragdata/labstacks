@@ -1,11 +1,13 @@
-# documentation: https://easyappointments.org/
-# slogan: Schedule Anything. Let's start with easy! Get the best free online appointment scheduler on your server, today.
+# name:
+# description: Schedule Anything. Let's start with easy! Get the best free online appointment scheduler on your server, today.
 # category: productivity
 # tags: calendar, scheduling, database
-# logo: svgs/easyappointments.png
-# port: 80
-
+# website:
+# docs: https://easyappointments.org/
+# repo:
+---
 services:
+
   easyappointments:
     image: alextselegidis/easyappointments:latest
     environment:

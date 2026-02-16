@@ -1,11 +1,13 @@
-# documentation: https://help.ente.io/self-hosting/installation/compose
-# slogan: Ente Photos is a fully open source, End to End Encrypted alternative to Google Photos and Apple Photos.
+# name:
+# description: Ente Photos is a fully open source, End-to-End Encrypted alternative to Google Photos and Apple Photos.
 # category: media
-# tags: photos,gallery,backup,encryption,privacy,self-hosted,google-photos,alternative
-# logo: svgs/ente-photos.svg
-# port: 8080
-
+# tags: photos, gallery, backup, encryption, privacy, self-hosted, google-photos, alternative
+# website:
+# docs: https://help.ente.io/self-hosting/installation/compose
+# repo:
+---
 services:
+
   museum:
     image: ghcr.io/ente-io/server:latest
     environment:

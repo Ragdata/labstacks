@@ -1,5 +1,13 @@
-version: "2.3"
+# name:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
+
   emby:
     image: emby/embyserver
     # Uncomment to enable DLNA and Wake-on-Lan

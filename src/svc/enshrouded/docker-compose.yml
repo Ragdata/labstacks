@@ -1,4 +1,13 @@
+# name:
+# description:
+# category:
+# tags:
+# website:
+# docs:
+# repo:
+---
 services:
+
   enshrouded:
     image: sknnr/enshrouded-dedicated-server:latest
     restart: unless-stopped
