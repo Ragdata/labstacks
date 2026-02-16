@@ -68,7 +68,9 @@ if [ ! -f "$CONFIG_DIR/config" ]; then
 # See https://github.com/Finsys/hawser for documentation
 
 # Docker socket path
-DOCKER_SOCKET=/var/run/docker.sock
+# DOCKER_SOCKET=/var/run/docker.sock
+# Rootless Docker Socket
+DOCKER_SOCKET=unix:///run/user/1000/docker.sock
 
 #################### Standard Mode (comment out for Edge mode) ####################
 PORT=2376
@@ -115,7 +117,8 @@ EnvironmentFile=/etc/hawser/config
 NoNewPrivileges=false
 ProtectSystem=strict
 ProtectHome=true
-ReadWritePaths=/var/run/docker.sock
+# ReadWritePaths=/var/run/docker.sock
+ReadWritePaths=/run/user/1000/docker.sock
 
 [Install]
 WantedBy=multi-user.target
