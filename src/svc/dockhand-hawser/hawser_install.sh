@@ -73,6 +73,8 @@ DOCKER_SOCKET=/var/run/docker.sock
 #################### Standard Mode (comment out for Edge mode) ####################
 PORT=2376
 
+ProtectSystem=no
+
 # TLS configuration (optional, Standard mode only)
 # TLS_CERT=/etc/hawser/server.crt
 # TLS_KEY=/etc/hawser/server.key
